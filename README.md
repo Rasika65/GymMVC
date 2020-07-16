@@ -17,7 +17,7 @@ Database Part
 
 4)	Now Run Script GYMMVC.sql Script.
 
-5)	If you Get Error saying "Membership Table already Exits", just remove Create Scripts for below listed tables 
+5)	If you Get Error saying "Membership Table already Exists", just remove Create Scripts for below listed tables 
     1.	Users
     2.	webpages_Membership
     3.	webpages_OAuthMembership
