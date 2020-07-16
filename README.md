@@ -3,27 +3,27 @@ Gym management system in .NET MVC
 
 Database Part
 -------------------
-1)	First thing to do is Create Database with Name: - GYMONEDBMVC.
+1)	Create Database with Name: - GYMONEDBMVC.
 
-2)	After Creating Database now make changes ConnectionStrings in Web.Config
-    Change this connectionStrings your Own Data Source and Sql UserName and Password.
+2)	After Creating Database now make changes to ConnectionStrings in Web.Config
+    Update this connectionStrings with your Own Data Source and Sql UserName and Password.
 
-3)	After making changes in connectionStrings Now Run this Project and it will create Simple Member ship Table.
+3)	After making changes in connectionStrings, Run the Project and it will create Simple Membership Tables as follows:
     1.	Users
     2.	webpages_Membership
     3.	webpages_OAuthMembership
     4.	webpages_Roles
     5.	webpages_UsersInRoles
 
-4)	After that now Run Script GYMMVC.sql Script.
+4)	Now Run Script GYMMVC.sql Script.
 
-5)	If you Get Error just try to remove it the Error " will Table already Exits of Membership " just Remove Creating tables Script for Below listed tables 
+5)	If you Get Error saying "Membership Table already Exits", just remove Create Scripts for below listed tables 
     1.	Users
     2.	webpages_Membership
     3.	webpages_OAuthMembership
     4.	webpages_Roles
     5.	webpages_UsersInRoles
-    And don't remove Insert Script of this Tables.
+    Please don't remove Insert Script of these Tables.
 6)	Login Details
     1.	Admin 
     User ID: Admin 
