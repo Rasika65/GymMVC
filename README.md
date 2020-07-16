@@ -15,7 +15,7 @@ Database Part
     4.	webpages_Roles
     5.	webpages_UsersInRoles
 
-4)	Now Run Script GYMMVC.sql Script.
+4)	Now Run Script GYMDB.sql Script.
 
 5)	If you Get Error saying "Membership Table already Exists", just remove Create Scripts for below listed tables 
     1.	Users
