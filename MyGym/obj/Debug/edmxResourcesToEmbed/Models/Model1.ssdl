@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MYGYMDBMVCModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MYGYMDBMVCModelStoreContainer">
+    <EntitySet Name="Fiscalyear" EntityType="MYGYMDBMVCModel.Store.Fiscalyear" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MemberRegistration" EntityType="MYGYMDBMVCModel.Store.MemberRegistration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PaymentDetails" EntityType="MYGYMDBMVCModel.Store.PaymentDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanMaster" EntityType="MYGYMDBMVCModel.Store.PlanMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReceiptDetails" EntityType="MYGYMDBMVCModel.Store.ReceiptDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SchemeMaster" EntityType="MYGYMDBMVCModel.Store.SchemeMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="MYGYMDBMVCModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="MYGYMDBMVCModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="MYGYMDBMVCModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="MYGYMDBMVCModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="MYGYMDBMVCModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_RoleId" Association="MYGYMDBMVCModel.Store.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="MYGYMDBMVCModel.Store.fk_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Fiscalyear">
+    <Key>
+      <PropertyRef Name="Fid" />
+    </Key>
+    <Property Name="Fid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FiscalyearFromDate" Type="datetime" />
+    <Property Name="FiscalyearToDate" Type="datetime" />
+    <Property Name="Year" Type="varchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="MemberRegistration">
+    <Key>
+      <PropertyRef Name="MemID" />
+    </Key>
+    <Property Name="MemID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MemberNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="MemberFName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MemberLName" Type="nvarchar" MaxLength="100" />
+    <Property Name="MemberMName" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="Age" Type="nvarchar" MaxLength="10" />
+    <Property Name="Contactno" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmailID" Type="nvarchar" MaxLength="30" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="30" />
+    <Property Name="PlantypeID" Type="int" />
+    <Property Name="WorkouttypeID" Type="int" />
+    <Property Name="Createdby" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="MemImagename" Type="nvarchar" MaxLength="500" />
+    <Property Name="MemImagePath" Type="nvarchar" MaxLength="500" />
+    <Property Name="JoiningDate" Type="datetime" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="MainMemberID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="PaymentDetails">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PlanID" Type="int" />
+    <Property Name="WorkouttypeID" Type="int" />
+    <Property Name="Paymenttype" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentFromdt" Type="datetime" />
+    <Property Name="PaymentTodt" Type="datetime" />
+    <Property Name="PaymentAmount" Type="numeric" />
+    <Property Name="NextRenwalDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUserID" Type="int" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="ModifyUserID" Type="int" />
+    <Property Name="RecStatus" Type="char" MaxLength="1" />
+    <Property Name="MemberID" Type="bigint" />
+    <Property Name="MemberNo" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="PlanMaster">
+    <Key>
+      <PropertyRef Name="PlanID" />
+    </Key>
+    <Property Name="PlanID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PlanName" Type="varchar" MaxLength="50" />
+    <Property Name="PlanAmount" Type="decimal" />
+    <Property Name="ServicetaxAmout" Type="decimal" />
+    <Property Name="ServiceTax" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUserID" Type="int" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="ModifyUserID" Type="int" />
+    <Property Name="RecStatus" Type="char" MaxLength="1" />
+    <Property Name="SchemeID" Type="int" />
+    <Property Name="PeriodID" Type="int" />
+    <Property Name="TotalAmout" Type="decimal" />
+    <Property Name="ServicetaxNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ReceiptDetails">
+    <Key>
+      <PropertyRef Name="ReceiptID" />
+    </Key>
+    <Property Name="ReceiptID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Memberid" Type="bigint" />
+    <Property Name="generateby" Type="bigint" />
+    <Property Name="createdby" Type="bigint" />
+    <Property Name="createddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SchemeMaster">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+    </Key>
+    <Property Name="SchemeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SchemeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Createdby" Type="int" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="schemebit" Type="bit" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="56" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="EmailID" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="MYGYMDBMVCModel.Store.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="MYGYMDBMVCModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="Users" Type="MYGYMDBMVCModel.Store.Users" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="MYGYMDBMVCModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fnNumberToWords" ReturnType="varchar(max)" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Number" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sprocMemberRegistrationDeleteSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sprocMemberRegistrationInsertUpdateSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemID" Type="bigint" Mode="In" />
+    <Parameter Name="MemberFName" Type="nvarchar" Mode="In" />
+    <Parameter Name="MemberLName" Type="nvarchar" Mode="In" />
+    <Parameter Name="MemberMName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="DOB" Type="datetime" Mode="In" />
+    <Parameter Name="Age" Type="nvarchar" Mode="In" />
+    <Parameter Name="Contactno" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gender" Type="nvarchar" Mode="In" />
+    <Parameter Name="PlantypeID" Type="int" Mode="In" />
+    <Parameter Name="WorkouttypeID" Type="int" Mode="In" />
+    <Parameter Name="Createdby" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="JoiningDate" Type="datetime" Mode="In" />
+    <Parameter Name="MemIDOUT" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sprocMemberRegistrationSelectList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sprocMemberRegistrationSelectSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sprocMemberRegistrationUpdateSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PaymentID" Type="bigint" Mode="In" />
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="WorkouttypeID" Type="int" Mode="In" />
+    <Parameter Name="Paymenttype" Type="nvarchar" Mode="In" />
+    <Parameter Name="PaymentFromdt" Type="datetime" Mode="In" />
+    <Parameter Name="PaymentAmount" Type="numeric" Mode="In" />
+    <Parameter Name="ModifyUserID" Type="int" Mode="In" />
+    <Parameter Name="RecStatus" Type="char" Mode="In" />
+    <Parameter Name="MemberID" Type="bigint" Mode="In" />
+    <Parameter Name="PaymentIDOUT" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sprocPaymentDetailsDeleteSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PaymentID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sprocPaymentDetailsInsertUpdateSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PaymentID" Type="bigint" Mode="In" />
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="WorkouttypeID" Type="int" Mode="In" />
+    <Parameter Name="Paymenttype" Type="nvarchar" Mode="In" />
+    <Parameter Name="PaymentFromdt" Type="datetime" Mode="In" />
+    <Parameter Name="PaymentAmount" Type="numeric" Mode="In" />
+    <Parameter Name="CreateUserID" Type="int" Mode="In" />
+    <Parameter Name="ModifyUserID" Type="int" Mode="In" />
+    <Parameter Name="RecStatus" Type="char" Mode="In" />
+    <Parameter Name="MemberID" Type="bigint" Mode="In" />
+    <Parameter Name="PaymentIDOUT" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sprocPaymentDetailsSelectList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sprocPaymentDetailsSelectSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PaymentID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sprocPlanMasterDeleteSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sprocPlanMasterInsertUpdateSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="SchemeID" Type="int" Mode="In" />
+    <Parameter Name="PeriodID" Type="int" Mode="In" />
+    <Parameter Name="PlanName" Type="varchar" Mode="In" />
+    <Parameter Name="PlanAmount" Type="decimal" Mode="In" />
+    <Parameter Name="ServiceTax" Type="decimal" Mode="In" />
+    <Parameter Name="CreateDate" Type="datetime" Mode="In" />
+    <Parameter Name="CreateUserID" Type="int" Mode="In" />
+    <Parameter Name="ModifyDate" Type="datetime" Mode="In" />
+    <Parameter Name="ModifyUserID" Type="int" Mode="In" />
+    <Parameter Name="RecStatus" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sprocPlanMasterSelectList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sprocPlanMasterSelectSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sprocRecepitTBInsertUpdateSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RecepitID" Type="bigint" Mode="In" />
+    <Parameter Name="Memberid" Type="bigint" Mode="In" />
+    <Parameter Name="generateby" Type="bigint" Mode="In" />
+    <Parameter Name="createdby" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sprocSchemeMasterDeleteSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SchemeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sprocSchemeMasterInsertUpdateSingleItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SchemeID" Type="int" Mode="In" />
+    <Parameter Name="SchemeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Createdby" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Usp_ALLPaymentDetailinfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Usp_checkplan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Planmaster" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_checkscheme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SchemeName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_checkUsernameExits" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_Generatenumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Usp_GenerateRecepit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Memberid" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Usp_GetAllRenwalrecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Usp_GetAllRenwalrecordsFromBetweenDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Paymentfromdt" Type="datetime" Mode="In" />
+    <Parameter Name="Paymenttodt" Type="datetime" Mode="In" />
+    <Parameter Name="exactdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Usp_GetAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Usp_GetAmount_reg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+    <Parameter Name="SchemeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Usp_GetDataofMemberbyID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MainMemberID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Usp_getDec" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Memberid" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Usp_GetMonthwisepaymentdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="month" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Usp_GetPlanByWorkTypeID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SchemeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Usp_getPlanPeriodID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PlanID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Usp_GetYearwisepaymentdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="year" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="USP_listofMemberName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberFName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_listofMemberno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_PaymentDetailinfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Usp_PaymentDetailinfo_Name" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberFName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_UserIDbyUserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_UserNamebyUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

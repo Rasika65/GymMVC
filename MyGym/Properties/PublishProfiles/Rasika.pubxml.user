@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\projects\MyGym_backup\publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/28/2020 16:46:39</publishTime>
+    </File>
+    <File Include="bin/Dapper.dll">
+      <publishTime>06/06/2020 23:09:25</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:27</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:36</publishTime>
+    </File>
+    <File Include="bin/de/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>06/06/2020 23:09:26</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>04/28/2020 16:46:29</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>06/06/2020 23:09:26</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>06/06/2020 23:09:26</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>06/06/2020 23:09:26</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>06/06/2020 23:09:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/28/2020 16:46:01</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:27</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:36</publishTime>
+    </File>
+    <File Include="bin/es/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:27</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:36</publishTime>
+    </File>
+    <File Include="bin/fr/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/GridMvc.dll">
+      <publishTime>06/06/2020 23:09:29</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:27</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:36</publishTime>
+    </File>
+    <File Include="bin/it/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:27</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:36</publishTime>
+    </File>
+    <File Include="bin/ja/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:27</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:36</publishTime>
+    </File>
+    <File Include="bin/ko/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>06/06/2020 23:09:27</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>04/28/2020 16:46:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Helpers.dll">
+      <publishTime>07/14/2020 21:26:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/28/2020 16:46:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>04/28/2020 16:46:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.WebPages.OAuth.dll">
+      <publishTime>07/14/2020 21:26:50</publishTime>
+    </File>
+    <File Include="bin/MyGym.dll">
+      <publishTime>07/16/2020 15:59:59</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/28/2020 16:46:20</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:28</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:37</publishTime>
+    </File>
+    <File Include="bin/ru/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/28/2020 16:46:24</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>04/28/2020 16:46:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/14/2020 21:24:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/28/2020 16:46:25</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.OData.dll">
+      <publishTime>04/28/2020 16:46:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>04/28/2020 16:46:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/14/2020 22:39:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/28/2020 16:46:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/14/2020 21:24:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/14/2020 21:24:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/14/2020 21:24:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/14/2020 21:24:49</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/28/2020 16:46:40</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>07/14/2020 21:26:44</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>07/14/2020 21:26:45</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:37</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.Edm.resources.dll">
+      <publishTime>06/06/2020 23:09:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.OData.resources.dll">
+      <publishTime>04/28/2020 16:46:37</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Spatial.resources.dll">
+      <publishTime>04/28/2020 16:46:32</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-theme.css">
+      <publishTime>04/07/2019 21:46:45</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-theme.css.map">
+      <publishTime>04/07/2019 21:46:45</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>04/07/2019 21:46:45</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.css">
+      <publishTime>04/07/2019 21:46:45</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.css.map">
+      <publishTime>04/07/2019 21:46:45</publishTime>
+    </File>
+    <File Include="bootstrap/css/bootstrap.min.css">
+      <publishTime>04/07/2019 21:46:45</publishTime>
+    </File>
+    <File Include="bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/07/2019 21:46:45</publishTime>
+    </File>
+    <File Include="bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/07/2019 21:46:46</publishTime>
+    </File>
+    <File Include="bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/07/2019 21:46:46</publishTime>
+    </File>
+    <File Include="bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/07/2019 21:46:46</publishTime>
+    </File>
+    <File Include="bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/07/2019 21:46:46</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.js">
+      <publishTime>04/07/2019 21:46:46</publishTime>
+    </File>
+    <File Include="bootstrap/js/bootstrap.min.js">
+      <publishTime>04/07/2019 21:46:46</publishTime>
+    </File>
+    <File Include="bootstrap/js/npm.js">
+      <publishTime>04/07/2019 21:46:46</publishTime>
+    </File>
+    <File Include="Content/Gridmvc.css">
+      <publishTime>05/04/2020 14:15:09</publishTime>
+    </File>
+    <File Include="Content/jquery-ui.min.css">
+      <publishTime>04/05/2019 04:44:37</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/13/2020 16:41:38</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>04/28/2020 16:46:17</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/css/font-awesome.css">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/css/font-awesome.min.css">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/bordered-pulled.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/core.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/fixed-width.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/font-awesome.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/icons.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/larger.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/list.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/mixins.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/path.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/rotated-flipped.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/spinning.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/stacked.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/less/variables.less">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/font-awesome.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_bordered-pulled.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_core.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_fixed-width.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_icons.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_larger.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_list.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_mixins.scss">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_path.scss">
+      <publishTime>04/07/2019 21:46:51</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_rotated-flipped.scss">
+      <publishTime>04/07/2019 21:46:51</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_spinning.scss">
+      <publishTime>04/07/2019 21:46:51</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_stacked.scss">
+      <publishTime>04/07/2019 21:46:51</publishTime>
+    </File>
+    <File Include="fonts/font-awesome/scss/_variables.scss">
+      <publishTime>04/07/2019 21:46:51</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/07/2019 21:46:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/07/2019 21:46:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/07/2019 21:46:50</publishTime>
+    </File>
+    <File Include="fonts/orbitron-variablefont_wght.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="fonts/quarkcheese.otf">
+      <publishTime>02/10/2020 10:35:10</publishTime>
+    </File>
+    <File Include="fonts/southernaire.ttf">
+      <publishTime>02/07/2013 23:56:13</publishTime>
+    </File>
+    <File Include="fonts/WorkSans-VariableFont_wght.ttf">
+      <publishTime>07/08/2015 00:00:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Grid.mvc.readme">
+      <publishTime>05/04/2020 14:15:09</publishTime>
+    </File>
+    <File Include="Images/accent.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/bg.jpg">
+      <publishTime>07/12/2020 14:51:47</publishTime>
+    </File>
+    <File Include="Images/bullet.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/Gym_logo.jpg">
+      <publishTime>04/30/2020 15:22:37</publishTime>
+    </File>
+    <File Include="Images/heroAccent.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList0.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList1.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList2.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList3.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList4.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList5.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList6.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList7.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList8.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/orderedList9.png">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Images/Workout.jpg">
+      <publishTime>05/01/2020 12:32:57</publishTime>
+    </File>
+    <File Include="Images/Yoga.jpg">
+      <publishTime>05/01/2020 12:48:59</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/14/2020 22:39:40</publishTime>
+    </File>
+    <File Include="Scripts/autocomplete/jquery-ui.min.js">
+      <publishTime>04/05/2019 04:42:19</publishTime>
+    </File>
+    <File Include="Scripts/autocomplete/jquery.js">
+      <publishTime>04/05/2019 04:41:59</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.js">
+      <publishTime>05/04/2020 14:15:09</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.lang.ru.js">
+      <publishTime>05/04/2020 14:15:09</publishTime>
+    </File>
+    <File Include="Scripts/gridmvc.min.js">
+      <publishTime>05/04/2020 14:15:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.js">
+      <publishTime>04/07/2019 21:47:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.js">
+      <publishTime>04/28/2020 16:46:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.min.js">
+      <publishTime>04/28/2020 16:46:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>04/07/2019 21:47:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>04/07/2019 21:47:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.js">
+      <publishTime>04/28/2020 16:46:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.min.js">
+      <publishTime>04/28/2020 16:46:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.min.css">
+      <publishTime>04/07/2019 21:47:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.min.js">
+      <publishTime>04/07/2019 21:47:13</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>04/28/2020 16:46:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>04/28/2020 16:46:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/28/2020 16:46:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/28/2020 16:46:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/28/2020 16:46:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/28/2020 16:46:18</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.debug.js">
+      <publishTime>04/28/2020 16:46:42</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.js">
+      <publishTime>04/28/2020 16:46:42</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/28/2020 16:46:19</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>04/28/2020 16:46:19</publishTime>
+    </File>
+    <File Include="Views/Account/AssignRoleToUser.cshtml">
+      <publishTime>07/14/2020 15:54:05</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Views/Account/GetAllUsers.cshtml">
+      <publishTime>07/13/2020 23:06:39</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>07/15/2020 22:00:10</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>07/15/2020 22:25:36</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>07/13/2020 23:16:52</publishTime>
+    </File>
+    <File Include="Views/Account/RoleCreate.cshtml">
+      <publishTime>07/13/2020 23:16:26</publishTime>
+    </File>
+    <File Include="Views/Account/RoleIndex.cshtml">
+      <publishTime>07/13/2020 23:06:39</publishTime>
+    </File>
+    <File Include="Views/Account/RoleUserList.cshtml">
+      <publishTime>07/14/2020 16:54:53</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePasswordPartial.cshtml">
+      <publishTime>07/15/2020 22:18:16</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Views/Account/_RemoveExternalLoginsPartial.cshtml">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Views/Account/_SetPasswordPartial.cshtml">
+      <publishTime>07/15/2020 21:49:32</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>05/04/2020 14:56:37</publishTime>
+    </File>
+    <File Include="Views/Home/AdminDashboard.cshtml">
+      <publishTime>07/14/2020 17:07:20</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>05/01/2020 16:13:12</publishTime>
+    </File>
+    <File Include="Views/Home/UserDashboard.cshtml">
+      <publishTime>07/15/2020 22:49:47</publishTime>
+    </File>
+    <File Include="Views/Member/GetAllMembers.cshtml">
+      <publishTime>07/14/2020 23:56:09</publishTime>
+    </File>
+    <File Include="Views/Member/RegisterMember.cshtml">
+      <publishTime>07/14/2020 23:26:37</publishTime>
+    </File>
+    <File Include="Views/Payment/AllMemberList.cshtml">
+      <publishTime>07/15/2020 15:32:31</publishTime>
+    </File>
+    <File Include="Views/Payment/PaymentDetails.cshtml">
+      <publishTime>07/16/2020 16:12:03</publishTime>
+    </File>
+    <File Include="Views/Receipt/Generatereceipt.cshtml">
+      <publishTime>07/16/2020 16:15:38</publishTime>
+    </File>
+    <File Include="Views/Renewal/RenewalDetails.cshtml">
+      <publishTime>07/16/2020 16:08:18</publishTime>
+    </File>
+    <File Include="Views/Renewal/RenewalDetailsPV.cshtml">
+      <publishTime>07/16/2020 15:02:25</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/DateTime.cshtml">
+      <publishTime>05/20/2020 16:11:05</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/28/2020 16:45:55</publishTime>
+    </File>
+    <File Include="Views/Shared/_Grid.cshtml">
+      <publishTime>05/04/2020 14:15:05</publishTime>
+    </File>
+    <File Include="Views/Shared/_GridPager.cshtml">
+      <publishTime>05/04/2020 14:15:04</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>07/13/2020 23:14:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>04/30/2020 20:04:27</publishTime>
+    </File>
+    <File Include="Views/Shared/_MainLayout.cshtml">
+      <publishTime>07/13/2020 23:15:55</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/14/2020 22:21:44</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/30/2020 20:50:58</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/15/2020 22:28:42</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

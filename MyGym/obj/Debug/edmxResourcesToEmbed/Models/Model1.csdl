@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MYGYMDBMVCModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MYGYMDBMVCEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Fiscalyears" EntityType="MYGYMDBMVCModel.Fiscalyear" />
+    <EntitySet Name="MemberRegistrations" EntityType="MYGYMDBMVCModel.MemberRegistration" />
+    <EntitySet Name="PaymentDetails" EntityType="MYGYMDBMVCModel.PaymentDetail" />
+    <EntitySet Name="PlanMasters" EntityType="MYGYMDBMVCModel.PlanMaster" />
+    <EntitySet Name="ReceiptDetails" EntityType="MYGYMDBMVCModel.ReceiptDetail" />
+    <EntitySet Name="SchemeMasters" EntityType="MYGYMDBMVCModel.SchemeMaster" />
+    <EntitySet Name="Users" EntityType="MYGYMDBMVCModel.User" />
+    <EntitySet Name="webpages_Membership" EntityType="MYGYMDBMVCModel.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="MYGYMDBMVCModel.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="MYGYMDBMVCModel.webpages_Roles" />
+    <AssociationSet Name="webpages_UsersInRoles" Association="MYGYMDBMVCModel.webpages_UsersInRoles">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <FunctionImport Name="sprocMemberRegistrationDeleteSingleItem">
+      <Parameter Name="MemID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sprocMemberRegistrationInsertUpdateSingleItem">
+      <Parameter Name="MemID" Mode="In" Type="Int64" />
+      <Parameter Name="MemberFName" Mode="In" Type="String" />
+      <Parameter Name="MemberLName" Mode="In" Type="String" />
+      <Parameter Name="MemberMName" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="DOB" Mode="In" Type="DateTime" />
+      <Parameter Name="Age" Mode="In" Type="String" />
+      <Parameter Name="Contactno" Mode="In" Type="String" />
+      <Parameter Name="EmailID" Mode="In" Type="String" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+      <Parameter Name="PlantypeID" Mode="In" Type="Int32" />
+      <Parameter Name="WorkouttypeID" Mode="In" Type="Int32" />
+      <Parameter Name="Createdby" Mode="In" Type="Int64" />
+      <Parameter Name="ModifiedBy" Mode="In" Type="Int64" />
+      <Parameter Name="JoiningDate" Mode="In" Type="DateTime" />
+      <Parameter Name="MemIDOUT" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sprocMemberRegistrationSelectList" ReturnType="Collection(MYGYMDBMVCModel.sprocMemberRegistrationSelectList_Result)" />
+    <FunctionImport Name="sprocMemberRegistrationSelectSingleItem" ReturnType="Collection(MYGYMDBMVCModel.sprocMemberRegistrationSelectSingleItem_Result)">
+      <Parameter Name="MemID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sprocMemberRegistrationUpdateSingleItem">
+      <Parameter Name="PaymentID" Mode="In" Type="Int64" />
+      <Parameter Name="PlanID" Mode="In" Type="Int32" />
+      <Parameter Name="WorkouttypeID" Mode="In" Type="Int32" />
+      <Parameter Name="Paymenttype" Mode="In" Type="String" />
+      <Parameter Name="PaymentFromdt" Mode="In" Type="DateTime" />
+      <Parameter Name="PaymentAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="ModifyUserID" Mode="In" Type="Int32" />
+      <Parameter Name="RecStatus" Mode="In" Type="String" />
+      <Parameter Name="MemberID" Mode="In" Type="Int64" />
+      <Parameter Name="PaymentIDOUT" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sprocPaymentDetailsDeleteSingleItem">
+      <Parameter Name="PaymentID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sprocPaymentDetailsInsertUpdateSingleItem">
+      <Parameter Name="PaymentID" Mode="In" Type="Int64" />
+      <Parameter Name="PlanID" Mode="In" Type="Int32" />
+      <Parameter Name="WorkouttypeID" Mode="In" Type="Int32" />
+      <Parameter Name="Paymenttype" Mode="In" Type="String" />
+      <Parameter Name="PaymentFromdt" Mode="In" Type="DateTime" />
+      <Parameter Name="PaymentAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
+      <Parameter Name="ModifyUserID" Mode="In" Type="Int32" />
+      <Parameter Name="RecStatus" Mode="In" Type="String" />
+      <Parameter Name="MemberID" Mode="In" Type="Int64" />
+      <Parameter Name="PaymentIDOUT" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sprocPaymentDetailsSelectList" ReturnType="Collection(MYGYMDBMVCModel.sprocPaymentDetailsSelectList_Result)" />
+    <FunctionImport Name="sprocPaymentDetailsSelectSingleItem" ReturnType="Collection(MYGYMDBMVCModel.sprocPaymentDetailsSelectSingleItem_Result)">
+      <Parameter Name="PaymentID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sprocPlanMasterDeleteSingleItem">
+      <Parameter Name="PlanID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sprocPlanMasterInsertUpdateSingleItem">
+      <Parameter Name="PlanID" Mode="In" Type="Int32" />
+      <Parameter Name="SchemeID" Mode="In" Type="Int32" />
+      <Parameter Name="PeriodID" Mode="In" Type="Int32" />
+      <Parameter Name="PlanName" Mode="In" Type="String" />
+      <Parameter Name="PlanAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="ServiceTax" Mode="In" Type="Decimal" />
+      <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+      <Parameter Name="CreateUserID" Mode="In" Type="Int32" />
+      <Parameter Name="ModifyDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ModifyUserID" Mode="In" Type="Int32" />
+      <Parameter Name="RecStatus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sprocPlanMasterSelectList" ReturnType="Collection(MYGYMDBMVCModel.sprocPlanMasterSelectList_Result)" />
+    <FunctionImport Name="sprocPlanMasterSelectSingleItem" ReturnType="Collection(MYGYMDBMVCModel.sprocPlanMasterSelectSingleItem_Result)">
+      <Parameter Name="PlanID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sprocRecepitTBInsertUpdateSingleItem">
+      <Parameter Name="RecepitID" Mode="In" Type="Int64" />
+      <Parameter Name="Memberid" Mode="In" Type="Int64" />
+      <Parameter Name="generateby" Mode="In" Type="Int64" />
+      <Parameter Name="createdby" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="sprocSchemeMasterDeleteSingleItem">
+      <Parameter Name="SchemeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sprocSchemeMasterInsertUpdateSingleItem">
+      <Parameter Name="SchemeID" Mode="In" Type="Int32" />
+      <Parameter Name="SchemeName" Mode="In" Type="String" />
+      <Parameter Name="Createdby" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_ALLPaymentDetailinfo" ReturnType="Collection(MYGYMDBMVCModel.Usp_ALLPaymentDetailinfo_Result)" />
+    <FunctionImport Name="Usp_checkplan" ReturnType="Collection(String)">
+      <Parameter Name="Planmaster" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_checkscheme" ReturnType="Collection(String)">
+      <Parameter Name="SchemeName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_checkUsernameExits" ReturnType="Collection(Int32)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_Generatenumber" ReturnType="Collection(MYGYMDBMVCModel.Usp_Generatenumber_Result)" />
+    <FunctionImport Name="Usp_GenerateRecepit" ReturnType="Collection(MYGYMDBMVCModel.Usp_GenerateRecepit_Result)">
+      <Parameter Name="Memberid" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_GetAllRenwalrecords" ReturnType="Collection(MYGYMDBMVCModel.Usp_GetAllRenwalrecords_Result)" />
+    <FunctionImport Name="Usp_GetAllRenwalrecordsFromBetweenDate" ReturnType="Collection(MYGYMDBMVCModel.Usp_GetAllRenwalrecordsFromBetweenDate_Result)">
+      <Parameter Name="Paymentfromdt" Mode="In" Type="DateTime" />
+      <Parameter Name="Paymenttodt" Mode="In" Type="DateTime" />
+      <Parameter Name="exactdate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_GetAllUsers" ReturnType="Collection(MYGYMDBMVCModel.Usp_GetAllUsers_Result)" />
+    <FunctionImport Name="Usp_GetAmount_reg" ReturnType="Collection(Decimal)">
+      <Parameter Name="PlanID" Mode="In" Type="Int32" />
+      <Parameter Name="SchemeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_GetDataofMemberbyID" ReturnType="Collection(MYGYMDBMVCModel.Usp_GetDataofMemberbyID_Result)">
+      <Parameter Name="MainMemberID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_getDec" ReturnType="Collection(MYGYMDBMVCModel.Usp_getDec_Result)">
+      <Parameter Name="Memberid" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_GetMonthwisepaymentdetails" ReturnType="Collection(MYGYMDBMVCModel.Usp_GetMonthwisepaymentdetails_Result)">
+      <Parameter Name="month" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_GetPlanByWorkTypeID" ReturnType="Collection(MYGYMDBMVCModel.Usp_GetPlanByWorkTypeID_Result)">
+      <Parameter Name="SchemeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_getPlanPeriodID" ReturnType="Collection(Int32)">
+      <Parameter Name="PlanID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_GetYearwisepaymentdetails" ReturnType="Collection(MYGYMDBMVCModel.Usp_GetYearwisepaymentdetails_Result)">
+      <Parameter Name="year" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="USP_listofMemberName" ReturnType="Collection(MYGYMDBMVCModel.USP_listofMemberName_Result)">
+      <Parameter Name="MemberFName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_listofMemberno" ReturnType="Collection(MYGYMDBMVCModel.USP_listofMemberno_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_PaymentDetailinfo" ReturnType="Collection(MYGYMDBMVCModel.Usp_PaymentDetailinfo_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_PaymentDetailinfo_Name" ReturnType="Collection(MYGYMDBMVCModel.Usp_PaymentDetailinfo_Name_Result)">
+      <Parameter Name="MemberFName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_UserIDbyUserName" ReturnType="Collection(Int32)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_UserNamebyUserID" ReturnType="Collection(String)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Fiscalyear">
+    <Key>
+      <PropertyRef Name="Fid" />
+    </Key>
+    <Property Name="Fid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FiscalyearFromDate" Type="DateTime" Precision="3" />
+    <Property Name="FiscalyearToDate" Type="DateTime" Precision="3" />
+    <Property Name="Year" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MemberRegistration">
+    <Key>
+      <PropertyRef Name="MemID" />
+    </Key>
+    <Property Name="MemID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="MemberFName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="MemberLName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="MemberMName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="Age" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Contactno" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="EmailID" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="PlantypeID" Type="Int32" />
+    <Property Name="WorkouttypeID" Type="Int32" />
+    <Property Name="Createdby" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" />
+    <Property Name="MemImagename" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="MemImagePath" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="JoiningDate" Type="DateTime" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="MainMemberID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="PaymentDetail">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PlanID" Type="Int32" />
+    <Property Name="WorkouttypeID" Type="Int32" />
+    <Property Name="Paymenttype" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PaymentFromdt" Type="DateTime" Precision="3" />
+    <Property Name="PaymentTodt" Type="DateTime" Precision="3" />
+    <Property Name="PaymentAmount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="NextRenwalDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserID" Type="Int32" />
+    <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifyUserID" Type="Int32" />
+    <Property Name="RecStatus" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="MemberID" Type="Int64" />
+    <Property Name="MemberNo" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PlanMaster">
+    <Key>
+      <PropertyRef Name="PlanID" />
+    </Key>
+    <Property Name="PlanID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PlanName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PlanAmount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ServicetaxAmout" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ServiceTax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateUserID" Type="Int32" />
+    <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifyUserID" Type="Int32" />
+    <Property Name="RecStatus" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="SchemeID" Type="Int32" />
+    <Property Name="PeriodID" Type="Int32" />
+    <Property Name="TotalAmout" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ServicetaxNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ReceiptDetail">
+    <Key>
+      <PropertyRef Name="ReceiptID" />
+    </Key>
+    <Property Name="ReceiptID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Memberid" Type="Int64" />
+    <Property Name="generateby" Type="Int64" />
+    <Property Name="createdby" Type="Int64" />
+    <Property Name="createddate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SchemeMaster">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+    </Key>
+    <Property Name="SchemeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SchemeName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Createdby" Type="Int32" />
+    <Property Name="Createddate" Type="DateTime" Precision="3" />
+    <Property Name="schemebit" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="56" Unicode="true" FixedLength="false" />
+    <Property Name="FullName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="EmailID" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="webpages_Roles" Relationship="MYGYMDBMVCModel.webpages_UsersInRoles" FromRole="Users" ToRole="webpages_Roles" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ProviderUserId" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Users" Relationship="MYGYMDBMVCModel.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="Users" />
+  </EntityType>
+  <Association Name="webpages_UsersInRoles">
+    <End Role="webpages_Roles" Type="MYGYMDBMVCModel.webpages_Roles" Multiplicity="*" />
+    <End Role="Users" Type="MYGYMDBMVCModel.User" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="sprocMemberRegistrationSelectList_Result">
+    <Property Type="Int64" Name="MemID" Nullable="false" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MemberFName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MemberLName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MemberMName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="302" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Age" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int64" Name="Createdby" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="MemImagename" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="MemImagePath" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="JoiningDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sprocMemberRegistrationSelectSingleItem_Result">
+    <Property Type="Int64" Name="MemID" Nullable="false" />
+    <Property Type="String" Name="s" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MemberFName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MemberLName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MemberMName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" />
+    <Property Type="String" Name="Age" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int64" Name="Createdby" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="MemImagename" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="MemImagePath" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="JoiningDate" Nullable="true" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sprocPaymentDetailsSelectList_Result">
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+    <Property Type="Int32" Name="PlanID" Nullable="true" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="String" Name="Paymenttype" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PaymentFromdt" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PaymentTodt" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="NextRenwalDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreateUserID" Nullable="true" />
+    <Property Type="DateTime" Name="ModifyDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ModifyUserID" Nullable="true" />
+    <Property Type="String" Name="RecStatus" Nullable="true" MaxLength="1" />
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="sprocPaymentDetailsSelectSingleItem_Result">
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+    <Property Type="Int32" Name="PlanID" Nullable="true" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="String" Name="Paymenttype" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PaymentFromdt" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="PaymentTodt" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="NextRenwalDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreateUserID" Nullable="true" />
+    <Property Type="DateTime" Name="ModifyDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ModifyUserID" Nullable="true" />
+    <Property Type="String" Name="RecStatus" Nullable="true" MaxLength="1" />
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="sprocPlanMasterSelectList_Result">
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="PlanAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="ServiceTax" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreateUserID" Nullable="true" />
+    <Property Type="DateTime" Name="ModifyDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ModifyUserID" Nullable="true" />
+    <Property Type="String" Name="RecStatus" Nullable="true" MaxLength="1" />
+    <Property Type="Decimal" Name="TotalAmout" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="sprocPlanMasterSelectSingleItem_Result">
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="PlanAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ServicetaxAmout" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="ServiceTax" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreateUserID" Nullable="true" />
+    <Property Type="DateTime" Name="ModifyDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ModifyUserID" Nullable="true" />
+    <Property Type="String" Name="RecStatus" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="SchemeID" Nullable="true" />
+    <Property Type="Int32" Name="PeriodID" Nullable="true" />
+    <Property Type="Decimal" Name="TotalAmout" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="ServicetaxNo" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Usp_ALLPaymentDetailinfo_Result">
+    <Property Type="String" Name="MemberReg" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="306" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="Int64" Name="Memberno" Nullable="true" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SchemeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Usp_Generatenumber_Result">
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Memnumber" Nullable="true" MaxLength="4" />
+  </ComplexType>
+  <ComplexType Name="Usp_GenerateRecepit_Result">
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="202" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SchemeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="AMtWords" Nullable="true" />
+    <Property Type="Decimal" Name="PlanAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ServicetaxAmout" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="ServiceTax" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ServicetaxNo" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="TotalAmout" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+    <Property Type="String" Name="Recivedby" Nullable="false" MaxLength="56" />
+    <Property Type="Int64" Name="Recepitno" Nullable="true" />
+    <Property Type="DateTime" Name="PaymentTodt" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetAllRenwalrecords_Result">
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="203" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SchemeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetAllRenwalrecordsFromBetweenDate_Result">
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="203" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SchemeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetAllUsers_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="56" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetDataofMemberbyID_Result">
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="306" />
+    <Property Type="Int64" Name="MainMemberID" Nullable="true" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Usp_getDec_Result">
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="DOB" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="FName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SchemeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Recivedby" Nullable="true" MaxLength="56" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetMonthwisepaymentdetails_Result">
+    <Property Type="String" Name="MemberFName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MemberLName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="MemberMName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CreateDate" Nullable="true" MaxLength="30" />
+    <Property Type="Int64" Name="Total" Nullable="true" />
+    <Property Type="String" Name="Paymentmonth" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="56" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetPlanByWorkTypeID_Result">
+    <Property Type="Int32" Name="PlanID" Nullable="false" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetYearwisepaymentdetails_Result">
+    <Property Type="String" Name="CurrentYear" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="april" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="may" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="june" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="july" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="august" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="sept" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="oct" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="nov" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="Decm" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="jan" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="feb" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="march" Nullable="true" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="Total" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="USP_listofMemberName_Result">
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="339" />
+    <Property Type="Int64" Name="MainMemberID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="USP_listofMemberno_Result">
+    <Property Type="Int64" Name="MemberNo" Nullable="false" />
+    <Property Type="Int64" Name="MemID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Usp_PaymentDetailinfo_Result">
+    <Property Type="String" Name="MemberReg" Nullable="true" MaxLength="20" />
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="306" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="Int64" Name="Memberno" Nullable="true" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SchemeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Usp_PaymentDetailinfo_Name_Result">
+    <Property Type="Int64" Name="MemberID" Nullable="true" />
+    <Property Type="Int64" Name="PaymentID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="306" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contactno" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmailID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MemberNo" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PlanName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SchemeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JoiningDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RenwalDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="PaymentAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WorkouttypeID" Nullable="true" />
+    <Property Type="Int32" Name="PlantypeID" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "AdminDashboard";
+}
+
+
+
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.11.1.js"></script>
+<script src="~/bootstrap/js/bootstrap.min.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
+<div class="container">
+    <div class="clearfix"></div>
+    <fieldset>
+        <legend>Admin Dashboard</legend>
+        <div class="panel">
+            <div class="panel-body">
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-user"></span>
+                    @Html.ActionLink("Create User ", "Register", "Account")
+                </div>
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-list"></span>
+                    @Html.ActionLink("List of all User", "GetAllUsers", "Account")
+                </div>
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    @Html.ActionLink("Create Role", "RoleCreate", "Account")
+                </div>                
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    @Html.ActionLink("Delete Role", "RoleIndex", "Account")
+                </div>
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-pawn"></span>
+                    @Html.ActionLink("List of all roles", "RoleIndex", "Account")
+                </div> 
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-random"></span>
+                    @Html.ActionLink("Assign Role To User ", "AssignRoleToUser", "Account")
+                </div>               
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-list"></span>
+                    @Html.ActionLink("List of all roles Assigned", "RoleUserList", "Account")
+                </div>
+                
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-file"></span>
+                    @Html.ActionLink("Receipt / Candidate ", "Generatereceipt", "receipt")
+                </div>
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-list"></span>
+                    @Html.ActionLink("All Member List", "AllMemberList", "Payment")
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

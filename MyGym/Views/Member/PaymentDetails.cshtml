@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MyGym.Models.Payment>
+
+@{
+    ViewBag.Title = "PaymentDetails";
+}
+
+@using GridMvc.Html
+
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<div class="container">
+    <fieldset>
+        <legend class="legend">Role List</legend>
+        <div class="panel">
+            <div class="panel-body">
+                <div style="width: 100%; height: 100%; overflow: scroll;  -ms-overflow-style: scrollbar; overflow-y:auto">
+                    @*Use overflow-y:auto so that the scrollbar is only shown if needed*@
+                    @*Use -ms-overflow-style to show scrollbars*@
+                    
+                    <br />
+
+                    @Html.Grid(Model).Columns(columns =>
+                    {
+                        columns.Add(c => c.MemberReg).Titled("Member Number").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.Name).Titled("Name").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.Address).Titled("Address").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.Contactno).Titled("Contact Number").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.EmailID).Titled("Email ID").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.PlanName).Titled("Plan Name").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.SchemeName).Titled("Scheme Name").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.PaymentFromdt).Titled("Joining Date").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.RenwalDate).Titled("Renewal Date").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.PaymentAmount).Titled("Payment Amount").Filterable(true).SetWidth(50);
+
+
+                        columns.Add()
+                        .Encoded(false)
+                        .Sanitized(false)
+                        .SetWidth(30)
+                        .RenderValueAs(o => Html.ActionLink("Delete", "RoleDelete", new { MemberId = o.MemberNo },
+                             new { onclick = "return confirm('Are you sure you wish to delete this Role ?');" }
+                             )).Titled("Delete");
+
+                    }).WithPaging(10).Sortable(true)
+
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

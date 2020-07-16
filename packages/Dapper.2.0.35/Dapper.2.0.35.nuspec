@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Dapper</id>
+    <version>2.0.35</version>
+    <title>Dapper</title>
+    <authors>Sam Saffron,Marc Gravell,Nick Craver</authors>
+    <owners>Sam Saffron,Marc Gravell,Nick Craver</owners>
+    <licenseUrl>https://www.nuget.org/packages/Dapper/2.0.35/license</licenseUrl>
+    <projectUrl>https://github.com/StackExchange/Dapper</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A high performance Micro-ORM supporting SQL Server, MySQL, Sqlite, SqlCE, Firebird etc..</description>
+    <summary />
+    <releaseNotes>https://stackexchange.github.io/Dapper/</releaseNotes>
+    <copyright>2019 Stack Exchange, Inc.</copyright>
+    <tags>orm sql micro-orm</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1" />
+      <group targetFramework="Unsupported0.0">
+        <dependency id="System.Reflection.Emit.Lightweight" version="4.7.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MyGym.Models.Users>
+
+@{
+    ViewBag.Title = "GetAllUsers";
+}
+
+@using GridMvc.Html
+
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="clearfix"></div>
+    <fieldset>
+        <legend class="legend">All Users</legend>
+        <div class="panel">
+            <div class="panel-body">
+
+
+                <div>
+                    @Html.ActionLink("Create User", "Register", "Account", new { @class = "btn btn-info btn-pressure" })
+                </div>
+                <br />
+
+                @Html.Grid(Model).Columns(columns =>
+                    {
+                        columns.Add(c => c.UserName).Titled("UserName").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.FullName).Titled("FullName").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.EmailID).Titled("EmailId").Filterable(true).SetWidth(50);
+                        columns.Add()
+                        .Encoded(false)
+                        .Sanitized(false)
+                        .SetWidth(30)
+                        .RenderValueAs(o => Html.ActionLink("Delete", "DeleteUser", new { Id = o.Id },
+                             new { onclick = "return confirm('Are you sure you wish to delete this Role ?');" }
+                             )).Titled("Delete");
+
+                    }).WithPaging(10)
+
+
+            </div>
+        </div>
+    </fieldset>
+</div>

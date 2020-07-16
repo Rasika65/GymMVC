@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MYGYMDBMVCModelStoreContainer" CdmEntityContainer="MYGYMDBMVCEntities1">
+    <EntitySetMapping Name="Fiscalyears">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.Fiscalyear">
+        <MappingFragment StoreEntitySet="Fiscalyear">
+          <ScalarProperty Name="Fid" ColumnName="Fid" />
+          <ScalarProperty Name="FiscalyearFromDate" ColumnName="FiscalyearFromDate" />
+          <ScalarProperty Name="FiscalyearToDate" ColumnName="FiscalyearToDate" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberRegistrations">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.MemberRegistration">
+        <MappingFragment StoreEntitySet="MemberRegistration">
+          <ScalarProperty Name="MemID" ColumnName="MemID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="MemberFName" ColumnName="MemberFName" />
+          <ScalarProperty Name="MemberLName" ColumnName="MemberLName" />
+          <ScalarProperty Name="MemberMName" ColumnName="MemberMName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="MemImagename" ColumnName="MemImagename" />
+          <ScalarProperty Name="MemImagePath" ColumnName="MemImagePath" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MainMemberID" ColumnName="MainMemberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentDetails">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.PaymentDetail">
+        <MappingFragment StoreEntitySet="PaymentDetails">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="Paymenttype" ColumnName="Paymenttype" />
+          <ScalarProperty Name="PaymentFromdt" ColumnName="PaymentFromdt" />
+          <ScalarProperty Name="PaymentTodt" ColumnName="PaymentTodt" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="NextRenwalDate" ColumnName="NextRenwalDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserID" ColumnName="ModifyUserID" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanMasters">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.PlanMaster">
+        <MappingFragment StoreEntitySet="PlanMaster">
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanAmount" ColumnName="PlanAmount" />
+          <ScalarProperty Name="ServicetaxAmout" ColumnName="ServicetaxAmout" />
+          <ScalarProperty Name="ServiceTax" ColumnName="ServiceTax" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserID" ColumnName="ModifyUserID" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+          <ScalarProperty Name="PeriodID" ColumnName="PeriodID" />
+          <ScalarProperty Name="TotalAmout" ColumnName="TotalAmout" />
+          <ScalarProperty Name="ServicetaxNo" ColumnName="ServicetaxNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReceiptDetails">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.ReceiptDetail">
+        <MappingFragment StoreEntitySet="ReceiptDetails">
+          <ScalarProperty Name="ReceiptID" ColumnName="ReceiptID" />
+          <ScalarProperty Name="Memberid" ColumnName="Memberid" />
+          <ScalarProperty Name="generateby" ColumnName="generateby" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemeMasters">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.SchemeMaster">
+        <MappingFragment StoreEntitySet="SchemeMaster">
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="schemebit" ColumnName="schemebit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Membership">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.webpages_Membership">
+        <MappingFragment StoreEntitySet="webpages_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.webpages_OAuthMembership">
+        <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Roles">
+      <EntityTypeMapping TypeName="MYGYMDBMVCModel.webpages_Roles">
+        <MappingFragment StoreEntitySet="webpages_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="MYGYMDBMVCModel.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sprocMemberRegistrationDeleteSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocMemberRegistrationDeleteSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocMemberRegistrationInsertUpdateSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocMemberRegistrationInsertUpdateSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocMemberRegistrationSelectList" FunctionName="MYGYMDBMVCModel.Store.sprocMemberRegistrationSelectList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.sprocMemberRegistrationSelectList_Result">
+          <ScalarProperty Name="MemID" ColumnName="MemID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="MemberFName" ColumnName="MemberFName" />
+          <ScalarProperty Name="MemberLName" ColumnName="MemberLName" />
+          <ScalarProperty Name="MemberMName" ColumnName="MemberMName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="MemImagename" ColumnName="MemImagename" />
+          <ScalarProperty Name="MemImagePath" ColumnName="MemImagePath" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sprocMemberRegistrationSelectSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocMemberRegistrationSelectSingleItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.sprocMemberRegistrationSelectSingleItem_Result">
+          <ScalarProperty Name="MemID" ColumnName="MemID" />
+          <ScalarProperty Name="s" ColumnName="s" />
+          <ScalarProperty Name="MemberFName" ColumnName="MemberFName" />
+          <ScalarProperty Name="MemberLName" ColumnName="MemberLName" />
+          <ScalarProperty Name="MemberMName" ColumnName="MemberMName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="MemImagename" ColumnName="MemImagename" />
+          <ScalarProperty Name="MemImagePath" ColumnName="MemImagePath" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sprocMemberRegistrationUpdateSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocMemberRegistrationUpdateSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocPaymentDetailsDeleteSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocPaymentDetailsDeleteSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocPaymentDetailsInsertUpdateSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocPaymentDetailsInsertUpdateSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocPaymentDetailsSelectList" FunctionName="MYGYMDBMVCModel.Store.sprocPaymentDetailsSelectList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.sprocPaymentDetailsSelectList_Result">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="Paymenttype" ColumnName="Paymenttype" />
+          <ScalarProperty Name="PaymentFromdt" ColumnName="PaymentFromdt" />
+          <ScalarProperty Name="PaymentTodt" ColumnName="PaymentTodt" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="NextRenwalDate" ColumnName="NextRenwalDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserID" ColumnName="ModifyUserID" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sprocPaymentDetailsSelectSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocPaymentDetailsSelectSingleItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.sprocPaymentDetailsSelectSingleItem_Result">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="Paymenttype" ColumnName="Paymenttype" />
+          <ScalarProperty Name="PaymentFromdt" ColumnName="PaymentFromdt" />
+          <ScalarProperty Name="PaymentTodt" ColumnName="PaymentTodt" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="NextRenwalDate" ColumnName="NextRenwalDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserID" ColumnName="ModifyUserID" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sprocPlanMasterDeleteSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocPlanMasterDeleteSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocPlanMasterInsertUpdateSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocPlanMasterInsertUpdateSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocPlanMasterSelectList" FunctionName="MYGYMDBMVCModel.Store.sprocPlanMasterSelectList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.sprocPlanMasterSelectList_Result">
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanAmount" ColumnName="PlanAmount" />
+          <ScalarProperty Name="ServiceTax" ColumnName="ServiceTax" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserID" ColumnName="ModifyUserID" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="TotalAmout" ColumnName="TotalAmout" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sprocPlanMasterSelectSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocPlanMasterSelectSingleItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.sprocPlanMasterSelectSingleItem_Result">
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="PlanAmount" ColumnName="PlanAmount" />
+          <ScalarProperty Name="ServicetaxAmout" ColumnName="ServicetaxAmout" />
+          <ScalarProperty Name="ServiceTax" ColumnName="ServiceTax" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUserID" ColumnName="CreateUserID" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUserID" ColumnName="ModifyUserID" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+          <ScalarProperty Name="PeriodID" ColumnName="PeriodID" />
+          <ScalarProperty Name="TotalAmout" ColumnName="TotalAmout" />
+          <ScalarProperty Name="ServicetaxNo" ColumnName="ServicetaxNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sprocRecepitTBInsertUpdateSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocRecepitTBInsertUpdateSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocSchemeMasterDeleteSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocSchemeMasterDeleteSingleItem" />
+    <FunctionImportMapping FunctionImportName="sprocSchemeMasterInsertUpdateSingleItem" FunctionName="MYGYMDBMVCModel.Store.sprocSchemeMasterInsertUpdateSingleItem" />
+    <FunctionImportMapping FunctionImportName="Usp_ALLPaymentDetailinfo" FunctionName="MYGYMDBMVCModel.Store.Usp_ALLPaymentDetailinfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_ALLPaymentDetailinfo_Result">
+          <ScalarProperty Name="MemberReg" ColumnName="MemberReg" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Memberno" ColumnName="Memberno" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_checkplan" FunctionName="MYGYMDBMVCModel.Store.Usp_checkplan" />
+    <FunctionImportMapping FunctionImportName="Usp_checkscheme" FunctionName="MYGYMDBMVCModel.Store.Usp_checkscheme" />
+    <FunctionImportMapping FunctionImportName="Usp_checkUsernameExits" FunctionName="MYGYMDBMVCModel.Store.Usp_checkUsernameExits" />
+    <FunctionImportMapping FunctionImportName="Usp_Generatenumber" FunctionName="MYGYMDBMVCModel.Store.Usp_Generatenumber">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_Generatenumber_Result">
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="Memnumber" ColumnName="Memnumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GenerateRecepit" FunctionName="MYGYMDBMVCModel.Store.Usp_GenerateRecepit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GenerateRecepit_Result">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="AMtWords" ColumnName="AMtWords" />
+          <ScalarProperty Name="PlanAmount" ColumnName="PlanAmount" />
+          <ScalarProperty Name="ServicetaxAmout" ColumnName="ServicetaxAmout" />
+          <ScalarProperty Name="ServiceTax" ColumnName="ServiceTax" />
+          <ScalarProperty Name="ServicetaxNo" ColumnName="ServicetaxNo" />
+          <ScalarProperty Name="TotalAmout" ColumnName="TotalAmout" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+          <ScalarProperty Name="Recivedby" ColumnName="Recivedby" />
+          <ScalarProperty Name="Recepitno" ColumnName="Recepitno" />
+          <ScalarProperty Name="PaymentTodt" ColumnName="PaymentTodt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllRenwalrecords" FunctionName="MYGYMDBMVCModel.Store.Usp_GetAllRenwalrecords">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GetAllRenwalrecords_Result">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllRenwalrecordsFromBetweenDate" FunctionName="MYGYMDBMVCModel.Store.Usp_GetAllRenwalrecordsFromBetweenDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GetAllRenwalrecordsFromBetweenDate_Result">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllUsers" FunctionName="MYGYMDBMVCModel.Store.Usp_GetAllUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GetAllUsers_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAmount_reg" FunctionName="MYGYMDBMVCModel.Store.Usp_GetAmount_reg" />
+    <FunctionImportMapping FunctionImportName="Usp_GetDataofMemberbyID" FunctionName="MYGYMDBMVCModel.Store.Usp_GetDataofMemberbyID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GetDataofMemberbyID_Result">
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MainMemberID" ColumnName="MainMemberID" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_getDec" FunctionName="MYGYMDBMVCModel.Store.Usp_getDec">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_getDec_Result">
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="Recivedby" ColumnName="Recivedby" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetMonthwisepaymentdetails" FunctionName="MYGYMDBMVCModel.Store.Usp_GetMonthwisepaymentdetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GetMonthwisepaymentdetails_Result">
+          <ScalarProperty Name="MemberFName" ColumnName="MemberFName" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="MemberLName" ColumnName="MemberLName" />
+          <ScalarProperty Name="MemberMName" ColumnName="MemberMName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Paymentmonth" ColumnName="Paymentmonth" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetPlanByWorkTypeID" FunctionName="MYGYMDBMVCModel.Store.Usp_GetPlanByWorkTypeID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GetPlanByWorkTypeID_Result">
+          <ScalarProperty Name="PlanID" ColumnName="PlanID" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_getPlanPeriodID" FunctionName="MYGYMDBMVCModel.Store.Usp_getPlanPeriodID" />
+    <FunctionImportMapping FunctionImportName="Usp_GetYearwisepaymentdetails" FunctionName="MYGYMDBMVCModel.Store.Usp_GetYearwisepaymentdetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_GetYearwisepaymentdetails_Result">
+          <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+          <ScalarProperty Name="april" ColumnName="april" />
+          <ScalarProperty Name="may" ColumnName="may" />
+          <ScalarProperty Name="june" ColumnName="june" />
+          <ScalarProperty Name="july" ColumnName="july" />
+          <ScalarProperty Name="august" ColumnName="august" />
+          <ScalarProperty Name="sept" ColumnName="sept" />
+          <ScalarProperty Name="oct" ColumnName="oct" />
+          <ScalarProperty Name="nov" ColumnName="nov" />
+          <ScalarProperty Name="Decm" ColumnName="Decm" />
+          <ScalarProperty Name="jan" ColumnName="jan" />
+          <ScalarProperty Name="feb" ColumnName="feb" />
+          <ScalarProperty Name="march" ColumnName="march" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_listofMemberName" FunctionName="MYGYMDBMVCModel.Store.USP_listofMemberName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.USP_listofMemberName_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MainMemberID" ColumnName="MainMemberID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_listofMemberno" FunctionName="MYGYMDBMVCModel.Store.USP_listofMemberno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.USP_listofMemberno_Result">
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="MemID" ColumnName="MemID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_PaymentDetailinfo" FunctionName="MYGYMDBMVCModel.Store.Usp_PaymentDetailinfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_PaymentDetailinfo_Result">
+          <ScalarProperty Name="MemberReg" ColumnName="MemberReg" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Memberno" ColumnName="Memberno" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_PaymentDetailinfo_Name" FunctionName="MYGYMDBMVCModel.Store.Usp_PaymentDetailinfo_Name">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MYGYMDBMVCModel.Usp_PaymentDetailinfo_Name_Result">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contactno" ColumnName="Contactno" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="MemberNo" ColumnName="MemberNo" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RenwalDate" ColumnName="RenwalDate" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="WorkouttypeID" ColumnName="WorkouttypeID" />
+          <ScalarProperty Name="PlantypeID" ColumnName="PlantypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_UserIDbyUserName" FunctionName="MYGYMDBMVCModel.Store.Usp_UserIDbyUserName" />
+    <FunctionImportMapping FunctionImportName="Usp_UserNamebyUserID" FunctionName="MYGYMDBMVCModel.Store.Usp_UserNamebyUserID" />
+  </EntityContainerMapping>
+</Mapping>

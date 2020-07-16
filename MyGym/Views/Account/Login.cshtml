@@ -1,0 +1,70 @@
+﻿@model MyGym.Models.LoginModel
+
+@{
+    ViewBag.Title = "";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; ;
+}
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+
+<div id="mainContent">
+    <section class="container">
+        <div class="innerContainer">
+            <div class="row">
+                <div id="myWizard" class="formArea LRmargin">
+                    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        
+                        <div class="loginlogo col-sm-12 text-center col-md-12 ">
+                            <img alt="" src="~/Images/Gym_logo.jpg" />                            
+                                <p class="site-title">Welcome to Fitness Gym !</p>                               
+                        </div>
+                        <div class="col-md-4 col-md-offset-4 col-xs-12">
+                            <div class="loginPage panel panel-info">
+                                <fieldset>
+                                    <legend>Log in Form</legend>
+                                    <ol>
+                                        <li>
+                                            <div class="form-group blacktext">
+                                                <span class=""><i class="glyphicon glyphicon-user"></i>User</span>
+                                                @Html.TextBoxFor(m => m.UserName)
+                                                @Html.ValidationMessageFor(m => m.UserName)
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group blacktext">
+                                                <span class=""><i class="glyphicon glyphicon-lock"></i>Password</span>
+                                                @Html.PasswordFor(m => m.Password)
+                                                @Html.ValidationMessageFor(m => m.Password)
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group blacktext">
+                                                @Html.CheckBoxFor(m => m.RememberMe)
+                                                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <input type="submit" value="Log in" class="btn btn-success"/>
+                                </fieldset>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

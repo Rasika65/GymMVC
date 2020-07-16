@@ -1,0 +1,44 @@
+﻿@model MyGym.Models.LocalPasswordModel
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="clearfix"></div>
+    <p class="message-success">@ViewBag.StatusMessage</p>
+    <fieldset>
+        <legend class="legend">Manage Account</legend>
+        <div class="panel">
+            <div class="panel-body">
+                <div class="col-md-12">
+                @if (ViewBag.HasLocalPassword)
+                {
+                    @Html.Partial("_ChangePasswordPartial")
+                }
+                else
+                { 
+                    @Html.Partial("_SetPasswordPartial")
+                }
+                    </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+
+
+@*<section id="externalLogins">
+    @Html.Action("RemoveExternalLogins")
+
+    <h3>Add an external login</h3>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>*@
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

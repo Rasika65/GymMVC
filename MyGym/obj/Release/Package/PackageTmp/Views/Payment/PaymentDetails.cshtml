@@ -1,0 +1,98 @@
+﻿@model IEnumerable<MyGym.Models.Payment>
+
+@{
+    ViewBag.Title = "PaymentDetails";
+}
+
+@using GridMvc.Html
+
+
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
+
+<div class="container">
+    <div class="clearfix"></div>
+    <fieldset>
+        <legend class="legend">Payment Details</legend>
+        <div class="panel">
+            <div class="panel-body">
+                @using (Html.BeginForm("PaymentDetails", "Payment", FormMethod.Get))
+                {
+                    <div class="row">
+                        <div class="col-md-2">
+                            @Html.Label("MemberId")
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("SearchbyId", null, new { id = "txtMemberId", @class = "form-control autoComId" })
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                            @Html.Label("MemberName")
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("SearchbyName", null, new { id = "txtMemberName", @class = "form-control autoComName" })
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 5px"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success" name="SearchButton" value="Search" />
+                        </div>
+                    </div>
+                }
+                <div style="margin-top: 10px"></div>
+
+                @if (Model != null && Model.Count() > 0)
+                {
+                    <div>
+                        @Html.Grid(Model).Columns(columns =>
+                       {
+                           columns.Add(c => c.MemberReg).Titled("Reg Number").Filterable(true).SetWidth(50);
+                           columns.Add(c => c.Name).Titled("Name").Filterable(true).SetWidth(50);
+                           columns.Add(c => c.Contactno).Titled("Contact Number").Filterable(true).SetWidth(50);
+                           columns.Add(c => c.PlanName).Titled("Plan Name").Filterable(true).SetWidth(50);
+                           columns.Add(c => c.SchemeName).Titled("Scheme Name").Filterable(true).SetWidth(50);
+                           columns.Add(c => c.PaymentAmount).Titled("Amount").Filterable(true).SetWidth(50);
+                           columns.Add(c => c.JoiningDate).Titled("Joining Date").Filterable(true).SetWidth(50);
+                           columns.Add(c => c.RenwalDate).Titled("Renewal Date").Filterable(true).SetWidth(50);
+                       }).WithPaging(10).Filterable(false)
+
+                    </div>
+                }
+
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+@section Scripts {
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/Scripts/autocomplete/jquery.js"></script>
+    <script src="~/Scripts/autocomplete/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".autoComId").autocomplete({
+                source: '@Url.Action("GetPaymentbyId")',
+                minLength: 2
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".autoComName").autocomplete({
+                source: '@Url.Action("GetPaymentbyName")',
+                minLength: 2
+            });
+        });
+    </script>
+}
+
+

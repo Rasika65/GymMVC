@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MyGym.Models.Member>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "GetAllMembers";
+}
+
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
+<div class="container">
+    <div class="clearfix"></div>
+    <fieldset>
+        <legend class="legend">Member List</legend>
+        <div class="panel">
+            <div class="panel-body">
+                <div style="width: 100%; height: 100%; overflow: scroll;  -ms-overflow-style: scrollbar; overflow-y:auto">
+                    <div>
+                        @Html.ActionLink("Add Member", "RegisterMember", "Member", new { @class = "btn btn-info btn-pressure" })
+                    </div>
+                    <br />
+
+                    @Html.Grid(Model).Columns(columns =>
+                    {
+                        columns.Add(c => c.MemberNo).Titled("Member Name").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.MemberFName).Titled("Name").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.Contactno).Titled("Contact Number").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.EmailID).Titled("Email ID").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.Gender).Titled("Gender").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.JoiningDate).Titled("Joining Date").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.PlantypeID).Titled("PlantypeID").Filterable(true).SetWidth(50);
+                        columns.Add(c => c.WorkouttypeID).Titled("WorkouttypeID").Filterable(true).SetWidth(50);
+
+
+                        columns.Add()
+                        .Encoded(false)
+                        .Sanitized(false)
+                        .SetWidth(30)
+                        .RenderValueAs(o => Html.ActionLink("Delete", "Delete", new { MemberId = o.MemID },
+                             new { onclick = "return confirm('Are you sure you wish to delete this Member ?');" }
+                             )).Titled("Delete");
+
+                    }).WithPaging(10)
+
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

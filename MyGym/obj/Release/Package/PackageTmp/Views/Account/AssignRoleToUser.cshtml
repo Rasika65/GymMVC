@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "AssignRoleToUser";
+}
+
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
+
+<div class="container">
+    <div class="clearfix"></div>
+    @using (Html.BeginForm("AssignRoleToUser", "Account"))
+    {
+   
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        
+        if (ViewBag.ResultMessage != null)
+        {
+        <div class="alert alert-success" style="float: none;" role="alert">@ViewBag.ResultMessage</div>
+        }
+        
+    
+        <fieldset>
+            <legend>Assign Role</legend>
+            <div class="panel">
+                <div class="panel-body">
+                    <div>
+                                @Html.ActionLink("Assigned Role List", "RoleUserList", "Account", new { @class = "btn btn-info btn-pressure" })
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <div class="col-md-4 col-sm-6">
+                                    @Html.Label("User Name")
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    @Html.DropDownList("Users", null, "Select User", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <div class="col-md-4 col-sm-6">
+                                    @Html.Label("Role Name")
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    @Html.DropDownList("Roles", null, "Select Role", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                <input id="Submit" type="submit" value="Submit" class="btn btn-success" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset> 
+    }
+</div>
+

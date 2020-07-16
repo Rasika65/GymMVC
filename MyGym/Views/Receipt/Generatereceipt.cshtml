@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Generatereceipt";
+}
+
+
+
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="clearfix"></div>
+    <fieldset>
+        <legend class="legend">Generate Receipt</legend>
+        <div class="panel">
+            <div class="panel-body">
+                @using (Html.BeginForm("Generatereceipt", "Receipt", FormMethod.Post))
+                {
+                    <div class="row">
+                        <div class="col-md-2">
+                            @Html.Label("MemberId")
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("MemberId", null, new { id = "txtMemberId", @class = "form-control autoComId" })
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                            @Html.Label("MemberName")
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBox("MemberName", null, new { id = "txtMemberName", @class = "form-control autoName" })
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 5px"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success" name="SearchButton" value="Download" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+
+@section Scripts {
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/Scripts/autocomplete/jquery.js"></script>
+    <script src="~/Scripts/autocomplete/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".autoComId").autocomplete({
+                source: '@Url.Action("GetPaymentbyId")',
+                minLength: 2
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".autoName").autocomplete({
+                source: '@Url.Action("GetPaymentbyName")',
+                minLength: 2
+            });
+        });
+    </script>
+}
