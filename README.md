@@ -5,16 +5,6 @@ Overview:
 
 GymMVC is gym Management System that provides an easy to use interface for the users and a database for the admin to maintain the records of gym members. This Gym Management system will handle all the necessary and minute details easily and proper database security accordingly to the user. You can keep records on your members, their memberships, employees, products, payroll, receipts of members & all transactions that occur in Gym. It is a complete gym and recreation facility system program which looks after all of your members, memberships and activities.
 
-<h1 align="center">
-	<img src="MyGym/Images/Login.png" alt="GymMVC">
-</h1>
-<h1 align="center">
-	<img src="MyGym/Images/AdminDasboard.png" alt="AdminDasboard">
-</h1>
-<h1 align="center">
-	<img src="MyGym/Images/ContactUs.png" alt="ContactUs">
-</h1>
-
 Features
 -------------------
 * Facilitates the data storage, data maintenance and its retrieval for the gym in an igneous way
@@ -23,6 +13,16 @@ Features
 * Modern, clean, SEO-optimized and fully responsive Theme based on Bootstrap
 * Store the record of the customers, the staff that has the privileges to access, modify and delete any record and service
 * Only the staff has the privilege to access any database and make the required changes, if necessary
+
+<h1 align="center">
+	<img src="MyGym/Images/Login.png" alt="GymMVC" width="90%">
+</h1>
+<h1 align="center">
+	<img src="MyGym/Images/AdminDasboard.png" alt="AdminDasboard" width="90%">
+</h1>
+<h1 align="center">
+	<img src="MyGym/Images/ContactUs.png" alt="ContactUs" width="90%">
+</h1>
 
 
 Database Part
