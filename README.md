@@ -3,7 +3,7 @@
 Overview:
 -------------------
 
-GymMVC is gym Management System that provides an easy to use interface for the users and a database for the admin to maintain the records of gym members. This Gym Management system will handle all the necessary and minute details easily and proper database security accordingly to the user. You can keep records on your members, their memberships, employees, products, payroll, receipts of members & all transactions that occur in Gym. It is a complete gym and recreation facility system program which looks after all of your members, memberships and activities.
+GymMVC is a Gym Management System that provides fitness businesses the functionality to manage memberships, payment, renewals and make your gym administration easy. The capabilities of gym management systems include storing member information in a database, managing financial records, products, payment receipts of members & all transactions that occur in Gym. It is a complete gym management solution which will enable you to streamline processes and save time that you can re-invest in other areas of your business! GymMVC systems may integrate with other types of software to perform specific tasks at a higher level. These integrations may include billing software to manage payments and membership dues, transactional email tools to increase interaction between members and managers, or social media marketing tools to increase brand awareness.
 
 Features
 -------------------
