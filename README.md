@@ -43,12 +43,12 @@ How to install
 * Setup a website in IIS and point the file directory to your published folder
 * Follow the database installation instructions and Fire up your browser
 * Login Details
-   1) Admin 
-       UserID : Admin 
-       Password : 123456
+   1) Admin <br>
+       UserID : Admin <br>
+       Password : 123456 <br>
 
-  2) System User
-      UserID : User
+  2) System User <br>
+      UserID : User <br>
        Password : 123456
 
 
@@ -76,10 +76,10 @@ Database Part
     4.	webpages_Roles
     5.	webpages_UsersInRoles
     Please don't remove Insert Script of these Tables.
-6)	Login Details
     
 
----------------- IIS Link ----------------
+IIS Link
+-------------------
 http://localhost/GymOne
 
 
