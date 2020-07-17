@@ -43,12 +43,13 @@ How to install
 * Setup a website in IIS and point the file directory to your published folder
 * Follow the database installation instructions and Fire up your browser
 * Login Details
-	1.	Admin 
-		User ID: Admin 
-		Password: 123456
-	2.	System User
-		User ID: User
-		Password: 123456
+   1) Admin 
+       UserID : Admin 
+       Password : 123456
+
+  2) System User
+      UserID : User
+       Password : 123456
 
 
 
