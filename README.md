@@ -17,7 +17,7 @@ Features
 
 Database Part
 -------------------
-1)	Create Database with Name: - GYMONEDBMVC.
+1)	Create Database with Name: - GYMDB.
 
 2)	After Creating Database now make changes to ConnectionStrings in Web.Config
     Update this connectionStrings with your Own Data Source and Sql UserName and Password.
