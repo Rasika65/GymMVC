@@ -7,11 +7,11 @@ GymMVC is gym Management System that provides an easy to use interface for the u
 
 Features
 -------------------
-•	The main objective of the project is to develop software that facilitates the data storage, data maintenance and its retrieval for the gym in an igneous way.
-•	To store the record of the customers, the staff that has the privileges to access, modify and delete any record and finally the service, gym provides to its customers.
-•	Also, only the staff has the privilege to access any database and make the required changes, if necessary.
-•	To develop easy-to-use software which handles the customer-staff relationship in an effective manner.
-•	To develop a user friendly system that requires minimal user training.
+* The main objective of the project is to develop software that facilitates the data storage, data maintenance and its retrieval for the gym in an igneous way.
+* To store the record of the customers, the staff that has the privileges to access, modify and delete any record and finally the service, gym provides to its customers.
+* Also, only the staff has the privilege to access any database and make the required changes, if necessary.
+* To develop easy-to-use software which handles the customer-staff relationship in an effective manner.
+* To develop a user friendly system that requires minimal user training.
 
 
 Database Part
