@@ -29,6 +29,29 @@ Features
 </h1>
 </br>
 
+System requirements
+-------------------
+* IIS 7+
+* ASP.NET 4.5+
+* MS SQL Server 2008 Express (or higher)
+* Microsoft Visual Studio Ultimate 2012 ([Download](http://www.microsoft.com/en-in/download/details.aspx?id=30678))
+* ASP.NET MVC 4
+
+How to install
+-------------------
+* Download the latest release from the download tab and unzip it to your web folder
+* Setup a website in IIS and point the file directory to your published folder
+* Follow the database installation instructions and Fire up your browser
+* Login Details
+	1.	Admin 
+		User ID: Admin 
+		Password: 123456
+	2.	System User
+		User ID: User
+		Password: 123456
+
+
+
 Database Part
 -------------------
 1)	Create Database with Name: - GYMDB.
@@ -53,12 +76,7 @@ Database Part
     5.	webpages_UsersInRoles
     Please don't remove Insert Script of these Tables.
 6)	Login Details
-    1.	Admin 
-    User ID: Admin 
-    Password: 123456
-    2.	System User
-    User ID: User
-    Password: 123456
+    
 
 ---------------- IIS Link ----------------
 http://localhost/GymOne
