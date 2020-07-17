@@ -14,6 +14,7 @@ Features
 * Store the record of the customers, the staff that has the privileges to access, modify and delete any record and service
 * Only the staff has the privilege to access any database and make the required changes, if necessary
 
+</br>
 <h1 align="center">
 	<img src="MyGym/Images/Login.png" alt="GymMVC" width="90%">
 </h1>
@@ -21,9 +22,12 @@ Features
 	<img src="MyGym/Images/AdminDasboard.png" alt="AdminDasboard" width="90%">
 </h1>
 <h1 align="center">
+	<img src="MyGym/Images/UserDashboard.png" alt="AdminDasboard" width="90%">
+</h1>
+<h1 align="center">
 	<img src="MyGym/Images/ContactUs.png" alt="ContactUs" width="90%">
 </h1>
-
+</br>
 
 Database Part
 -------------------
