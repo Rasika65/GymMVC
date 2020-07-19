@@ -1,0 +1,73 @@
+<h1 align="center">Introduction to GymMVC</h1>
+</br>
+
+Overview
+------------------------------------
+GymMVC is gym Management System that provides an easy to use interface for the users and a database for the admin to maintain the records of gym members. This Gym Management system will handle all the necessary and minute details easily and proper database security accordingly to the user. You can keep records on your members, their memberships, employees, products, payroll, receipts of members & all transactions that occur in Gym. It is a complete gym and recreation facility system program which looks after all of your members, memberships and activities.
+
+Module
+------------------------------------
+•	Login
+The Gym Management System first load the login form. Here the user will enter his credentials and system will authenticate the user. After authentication you will be directed to the home dashboard.
+  
+•	About Us
+About us page will inform the reader about the company and its operations.
+ 
+
+•	Contact Us
+A contact page will allow visitors to reach out to the website owner, customer support, or a person at the company.
+  
+•	Home 
+There are two basic modules in this system as describe briefly in below. Based on user privileges access to application features is granted.
+o	Administrative module: This user is an admin type who has full rights on the system.
+o	User module: This is a normal level of user who will be very few number of functionality of website. 
+  
+•	Create User
+Registration module will allow to add new users in the system. You can assign roles to this users later on.
+ 
+
+•	List of all User
+This tab will allow you to see list of all the “Users” present in the system and their details. 
+  
+•	Create Role
+Create role tab will allow you to create the system role which can be then assigned to system users. These “Roles” are used to manage the user’s access to system features. 
+ 
+
+•	List of all roles
+This tab will allow you to see list of all the “Roles” currently present in the system.
+   
+•	Assign Role to User
+I this module you can assign “Roles” to “Users”.
+ 
+
+•	List of all roles Assigned
+Here you can see list of all roles assigned to user.
+  
+•	Delete Role
+Allows you to delete the existing system “Roles”.
+ 
+
+•	Receipt / Candidate
+Allows you to generate a receipt for user.
+ 
+   
+•	All Member List
+This tab allows you to see list of all gym “Members” and their details.
+ 
+
+•	Manage Account
+User can change their password from here.
+ 
+ 
+•	Register Member
+You can register new members here. You can add their personal details, workout type (gym, yoga, gym + cardio) and plan type (monthly, quarterly, half yearly and yearly), joining date, amount, etc.
+ 
+
+•	Payment listing
+In this tab, you can see list of all payments made by the gym member. All the previous payments will be also shown if member has done renewal.
+  
+•	Payment Renewal
+Here you can do the payment renewal for the workout plan gym members are registered for. You can also change the workout plan if member wants sign up for different workout plan.
+ 
+
+ 
