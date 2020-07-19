@@ -9,7 +9,7 @@ Module
 •	Login
 The Gym Management System first load the login form. Here the user will enter his credentials and system will authenticate the user. After authentication you will be directed to the home dashboard.
 <h1 align="center">
-	<img src="MyGym/Images/Project Guide/Login.png" alt="GymMVC" width="90%">
+	<img src="MyGym/Images/Project Guide/Login.png" alt="GymMVC" width="80%">
 </h1>
   
 •	About Us
@@ -38,7 +38,7 @@ o	User module: This is a normal level of user who will be very few number of fun
 •	Create User
 Registration module will allow to add new users in the system. You can assign roles to this users later on.
 <h1 align="center">
-	<img src="MyGym/Images/Project Guide/CreateUser.png" alt="GymMVC" width="90%">
+	<img src="MyGym/Images/Project Guide/CreateUser.png" alt="GymMVC" width="50%">
 </h1>  
 
 •	List of all User
