@@ -4,7 +4,7 @@
 
 Overview
 ------------------------------------
-GymMVC is gym Management System that provides an easy to use interface for the users and a database for the admin to maintain the records of gym members. This Gym Management system will handle all the necessary and minute details easily and proper database security accordingly to the user. You can keep records on your members, their memberships, employees, products, payroll, receipts of members & all transactions that occur in Gym. It is a complete gym and recreation facility system program which looks after all of your members, memberships and activities.
+GymMVC is a Gym Management System that provides fitness businesses the functionality to manage memberships, payment, renewals and make your gym administration easy. The capabilities of gym management systems include storing member information in a database, managing financial records, products, payment receipts of members & all transactions that occur in Gym. It is a complete gym management solution which will enable you to streamline processes and save time that you can re-invest in other areas of your business!
 
 </br>
 
@@ -34,9 +34,9 @@ A contact page will allow visitors to reach out to the website owner, customer s
 * <b>Home</b> </br>
 There are two basic modules in this system as describe briefly in below. Based on user privileges access to application features is granted.</br>
 o	<b>Administrative module:</b>
-</br>This user is an admin type who has full rights on the system.</br>
+</br>This Module will be accessible to system users with <b>"Admin"</b> role. Admin role has full rights on the system.</br>
 o	<b>User module:</b> 
-</br>This is a normal level of user who will be very few number of functionality of website. 
+</br>This Module will be accessible to system users with <b>"User"</b> role. User role will have aceess to limited functionality of system. 
 <h1 align="center">
 	<img src="MyGym/Images/Project Guide/AdminDashboard.png" alt="GymMVC" width="80%">
 </h1>
