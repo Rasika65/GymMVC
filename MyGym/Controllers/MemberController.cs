@@ -19,7 +19,7 @@ namespace MyGym.Controllers
         // GET: /Member/
 
         [HttpGet]
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User,Admin")]
         public ActionResult RegisterMember()
         {
             member.ListScheme = db.SchemeList.ToList();
@@ -28,7 +28,7 @@ namespace MyGym.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User,Admin")]
         [ActionName("RegisterMember")]
         public ActionResult RegisterMember1(Member member)
         {

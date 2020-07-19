@@ -130,7 +130,8 @@ namespace MyGym.Controllers
                     }
                     else if (!string.IsNullOrEmpty(obj.MembernoSearch))
                     {
-                        Mainno = obj.MembernoSearch;
+                        string[] Memno = obj.MembernoSearch.Split('/');
+                        Mainno = Memno[1];
                     }
 
                     var list = br.GetDataofMember(Mainno);

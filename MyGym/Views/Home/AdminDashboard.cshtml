@@ -28,11 +28,7 @@
                 <div class="col-md-3  dashboard-icon col-sm-3">
                     <span class="glyphicon glyphicon-pencil"></span>
                     @Html.ActionLink("Create Role", "RoleCreate", "Account")
-                </div>                
-                <div class="col-md-3  dashboard-icon col-sm-3">
-                    <span class="glyphicon glyphicon-remove"></span>
-                    @Html.ActionLink("Delete Role", "RoleIndex", "Account")
-                </div>
+                </div>  
                 <div class="col-md-3  dashboard-icon col-sm-3">
                     <span class="glyphicon glyphicon-pawn"></span>
                     @Html.ActionLink("List of all roles", "RoleIndex", "Account")
@@ -44,15 +40,18 @@
                 <div class="col-md-3  dashboard-icon col-sm-3">
                     <span class="glyphicon glyphicon-list"></span>
                     @Html.ActionLink("List of all roles Assigned", "RoleUserList", "Account")
-                </div>
-                
+                </div>      
                 <div class="col-md-3  dashboard-icon col-sm-3">
-                    <span class="glyphicon glyphicon-file"></span>
-                    @Html.ActionLink("Receipt / Candidate ", "Generatereceipt", "receipt")
+                    <span class="glyphicon glyphicon-user"></span>
+                    @Html.ActionLink("Register Member ", "RegisterMember", "Member")
                 </div>
                 <div class="col-md-3  dashboard-icon col-sm-3">
                     <span class="glyphicon glyphicon-list"></span>
                     @Html.ActionLink("All Member List", "AllMemberList", "Payment")
+                </div>
+                <div class="col-md-3  dashboard-icon col-sm-3">
+                    <span class="glyphicon glyphicon-file"></span>
+                    @Html.ActionLink("Receipt / Candidate ", "Generatereceipt", "receipt")
                 </div>
             </div>
         </div>

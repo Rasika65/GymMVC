@@ -14,10 +14,12 @@ body {
     padding: 0;
     overflow: auto;
     overflow-x: hidden;
+    /*-ms-overflow-style: none !important ;*/
     padding-right: 15px;
 }
-
-    
+/*body ::-webkit-scrollbar {
+        display: none !important;
+    }*/
 
 a {
     color: #333;
