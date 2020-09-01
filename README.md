@@ -15,9 +15,9 @@ Features
 * Only the staff has the privilege to access any database and make the required changes, if necessary
 * PayPAl payment gateway API Integration for easy and secure online payments
 
-Features
+Project Guide Link
 -------------------
-<a href="/Project Guide.md">Project Guide</a>
+Here is detailed description of project: <a href="/Project Guide.md">Project Guide</a>
 
 </br>
 <h1 align="center">
