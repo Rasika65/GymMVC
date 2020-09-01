@@ -15,6 +15,10 @@ Features
 * Only the staff has the privilege to access any database and make the required changes, if necessary
 * PayPAl payment gateway API Integration for easy and secure online payments
 
+Features
+-------------------
+<a href="/Project Guide.md">Project Guide</a>
+
 </br>
 <h1 align="center">
 	<img src="MyGym/Images/Login.png" alt="GymMVC" width="90%">
