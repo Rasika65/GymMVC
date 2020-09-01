@@ -13,6 +13,7 @@ Features
 * Modern, clean, SEO-optimized and fully responsive Theme based on Bootstrap
 * Store the record of the customers, the staff that has the privileges to access, modify and delete any record and service
 * Only the staff has the privilege to access any database and make the required changes, if necessary
+* PayPAl payment gateway API Integration for easy and secure online payments
 
 </br>
 <h1 align="center">
