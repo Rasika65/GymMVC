@@ -21,6 +21,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -415,6 +417,7 @@
     <Content Include="Views\Receipt\Generatereceipt.cshtml" />
     <Content Include="Views\Renewal\RenewalDetails.cshtml" />
     <Content Include="Views\Renewal\RenewalDetailsPV.cshtml" />
+    <Content Include="Views\Member\ConfirmPayment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

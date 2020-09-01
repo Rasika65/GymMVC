@@ -258,6 +258,9 @@ E:\Git\MyGym\MyGym\bin\ko\System.Spatial.resources.dll
 E:\Git\MyGym\MyGym\bin\ru\System.Spatial.resources.dll
 E:\Git\MyGym\MyGym\bin\zh-Hans\System.Spatial.resources.dll
 E:\Git\MyGym\MyGym\bin\zh-Hant\System.Spatial.resources.dll
-E:\Git\MyGym\MyGym\obj\Debug\MyGym.csprojResolveAssemblyReference.cache
 E:\Git\MyGym\MyGym\obj\Debug\MyGym.dll
 E:\Git\MyGym\MyGym\obj\Debug\MyGym.pdb
+E:\Git\MyGym\MyGym\bin\MyGym.dll.config
+E:\Git\MyGym\MyGym\obj\Debug\MyGym.csprojAssemblyReference.cache
+E:\Git\MyGym\MyGym\obj\Debug\MyGym.csproj.CoreCompileInputs.cache
+E:\Git\MyGym\MyGym\obj\Debug\MyGym.csproj.CopyComplete
