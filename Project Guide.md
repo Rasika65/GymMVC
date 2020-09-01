@@ -87,6 +87,15 @@ You can register new members here. You can add their personal details, workout t
 </h1> 
 </br> 
 
+You will be then redirected to next page where you will have to choose the payment mode. You can either do cash payment or paypal online payment as shown below. Once the payment is done, member registration will be completed successfully.
+<h1 align="center">
+	<img src="MyGym/Images/Project Guide/Payment_1.png" alt="GymMVC" width="80%">
+</h1> 
+<h1 align="center">
+	<img src="MyGym/Images/Project Guide/Payment_2.png" alt="GymMVC" width="80%">
+</h1> 
+</br> 
+
 * <b>Receipt Candidate</b> </br>
 Allows you to generate a receipt for user.
 <h1 align="center">
