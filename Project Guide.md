@@ -17,20 +17,6 @@ The Gym Management System first load the login form. Here the user will enter hi
 </h1>
 </br>
 
-* <b>About Us</b></br>
-About us page will inform the reader about the company and its operations.
-<h1 align="center">
-	<img src="MyGym/Images/Project Guide/About_us.png" alt="GymMVC" width="80%">
-</h1> 
-</br> 
-
-* <b>Contact Us</b> </br>
-A contact page will allow visitors to reach out to the website owner, customer support, or a person at the company.
-<h1 align="center">
-	<img src="MyGym/Images/Project Guide/Contact_Us.png" alt="GymMVC" width="80%">
-</h1> 
-</br>
-
 * <b>Home</b> </br>
 There are two basic modules in this system as describe briefly in below. Based on user privileges access to application features is granted.</br>
 o	<b>Administrative module:</b>
@@ -87,31 +73,10 @@ Here you can see list of all roles assigned to user.
 </h1> 
 </br>
 
-* <b>Delete Role</b> </br>
-Allows you to delete the existing system “Roles”.
-<h1 align="center">
-	<img src="MyGym/Images/Project Guide/DeleteRole.png" alt="GymMVC" width="80%">
-</h1> 
-</br>
-
-* <b>Receipt Candidate</b> </br>
-Allows you to generate a receipt for user.
-<h1 align="center">
-	<img src="MyGym/Images/Project Guide/GenerateReciept.png" alt="GymMVC" width="80%">
-</h1> 
-</br>
-
 * <b>All Member List</b> </br>
 This tab allows you to see list of all gym “Members” and their details.
 <h1 align="center">
 	<img src="MyGym/Images/Project Guide/AllMemberList.png" alt="GymMVC" width="80%">
-</h1>  
-</br>
-
-* <b>Manage Account</b> </br>
-User can change their password from here.
-<h1 align="center">
-	<img src="MyGym/Images/Project Guide/MangeAccount.png" alt="GymMVC" width="80%">
 </h1>  
 </br>
  
@@ -121,6 +86,13 @@ You can register new members here. You can add their personal details, workout t
 	<img src="MyGym/Images/Project Guide/RegisterMember.png" alt="GymMVC" width="80%">
 </h1> 
 </br> 
+
+* <b>Receipt Candidate</b> </br>
+Allows you to generate a receipt for user.
+<h1 align="center">
+	<img src="MyGym/Images/Project Guide/GenerateReciept.png" alt="GymMVC" width="80%">
+</h1> 
+</br>
 
 * <b>Payment listing</b> </br>
 In this tab, you can see list of all payments made by the gym member. All the previous payments will be also shown if member has done renewal.
@@ -137,5 +109,26 @@ Here you can do the payment renewal for the workout plan gym members are registe
 <h1 align="center">
 	<img src="MyGym/Images/Project Guide/PaymentRenewal2.png" alt="GymMVC" width="80%">
 </h1> 
+
+* <b>Manage Account</b> </br>
+User can change their password from here.
+<h1 align="center">
+	<img src="MyGym/Images/Project Guide/MangeAccount.png" alt="GymMVC" width="80%">
+</h1>  
+</br>
+
+* <b>About Us</b></br>
+About us page will inform the reader about the company and its operations.
+<h1 align="center">
+	<img src="MyGym/Images/Project Guide/About_us.png" alt="GymMVC" width="80%">
+</h1> 
+</br> 
+
+* <b>Contact Us</b> </br>
+A contact page will allow visitors to reach out to the website owner, customer support, or a person at the company.
+<h1 align="center">
+	<img src="MyGym/Images/Project Guide/Contact_Us.png" alt="GymMVC" width="80%">
+</h1> 
+</br>
 
  
