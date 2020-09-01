@@ -28,6 +28,13 @@ Features
 <h1 align="center">
 	<img src="MyGym/Images/ContactUs.png" alt="ContactUs" width="90%">
 </h1>
+<h1 align="center">
+	<img src="MyGym/Images/Paypal_API_1.png" alt="MemberRegistration" width="90%">
+</h1>
+<h1 align="center">
+	<img src="MyGym/Images/Paypal_API_2.png" alt="PayPayPaymentAPI" width="90%">
+</h1>
+
 </br>
 
 System requirements
