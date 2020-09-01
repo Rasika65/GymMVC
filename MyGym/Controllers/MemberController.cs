@@ -27,6 +27,38 @@ namespace MyGym.Controllers
             return View(member);
         }
 
+        //[HttpPost]
+        //[Authorize(Roles = "User,Admin")]
+        //[ActionName("RegisterMember")]
+        //public ActionResult RegisterMember1(Member member)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        member.Createdby = Convert.ToInt32(Session["UserId"]);
+        //        int MemberID = br.InsertMember(member);
+        //        if (MemberID > 0)
+        //        {
+        //            int payresult = Pay(member, MemberID);
+        //            if (payresult > 0)
+        //            {
+        //                TempData["Message"] = "Member Created Successfully.";
+        //            }
+        //            else
+        //            {
+        //                TempData["Message"] = "Some thing went wrong while Member Created .";
+        //            }
+        //        }
+        //        else
+        //        {
+        //            TempData["Message"] = "Some thing went wrong while Member Created .";
+        //        }
+        //        return RedirectToAction("GetAllMembers");
+        //    }
+        //    member.ListScheme = db.SchemeList.ToList();
+        //    ViewBag.planlist = new SelectList(db.PlanList, "PlanID", "PlanName");
+        //    return View(member);
+        //}
+
         [HttpPost]
         [Authorize(Roles = "User,Admin")]
         [ActionName("RegisterMember")]
@@ -34,30 +66,14 @@ namespace MyGym.Controllers
         {
             if (ModelState.IsValid)
             {
-                member.Createdby = Convert.ToInt32(Session["UserId"]);
-                int MemberID = br.InsertMember(member);
-                if (MemberID > 0)
-                {
-                    int payresult = Pay(member, MemberID);
-                    if (payresult > 0)
-                    {
-                        TempData["Message"] = "Member Created Successfully.";
-                    }
-                    else
-                    {
-                        TempData["Message"] = "Some thing went wrong while Member Created .";
-                    }
-                }
-                else
-                {
-                    TempData["Message"] = "Some thing went wrong while Member Created .";
-                }
-                return RedirectToAction("GetAllMembers");
+                TempData["memberdata"] = member;
+                return RedirectToAction("ConfirmPayment");
             }
             member.ListScheme = db.SchemeList.ToList();
             ViewBag.planlist = new SelectList(db.PlanList, "PlanID", "PlanName");
             return View(member);
         }
+
 
         [HttpGet]
         public ActionResult GetAllMembers()
@@ -73,8 +89,80 @@ namespace MyGym.Controllers
             return RedirectToAction("GetAllMembers");
         }
 
+        
+        [HttpGet]
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult ConfirmPayment()
+        {
+            Member member = (Member)TempData.Peek("memberdata");
+            member.ListScheme = db.SchemeList.ToList();
+            member.ListPlan = db.PlanList.ToList();
+            
+            return View(member);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "User,Admin")]
+        [ActionName("ConfirmPayment")]
+        public ActionResult ConfirmPayment1()
+        {
+            Member member = (Member)TempData["memberdata"];
+
+            member.Createdby = Convert.ToInt32(Session["UserId"]);
+            int MemberID = br.InsertMember(member);
+            if (MemberID > 0)
+            {
+                int payresult = Pay(member, MemberID, null);
+                if (payresult > 0)
+                {
+                    TempData["Message"] = "Member Created Successfully.";
+                    return RedirectToAction("GetAllMembers");
+                }
+                else
+                {
+                    TempData["Message"] = "Some thing went wrong! Please try again.";
+                    return RedirectToAction("RegisterMember");
+                }
+            }
+            else
+            {
+                TempData["Message"] = "Some thing went wrong! Please try again.";
+                return RedirectToAction("RegisterMember");
+            }
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "User,Admin")]
+        public ActionResult PaymentSucccess(string tran_Id)
+        {
+            Member member = (Member)TempData["memberdata"];
+
+            member.Createdby = Convert.ToInt32(Session["UserId"]);
+            int MemberID = br.InsertMember(member);
+            if (MemberID > 0)
+            {
+                int payresult = Pay(member, MemberID, tran_Id);
+                if (payresult > 0)
+                {
+                    TempData["Message"] = "Member Created Successfully.";
+                    return RedirectToAction("GetAllMembers");
+                }
+                else
+                {
+                    TempData["Message"] = "Some thing went wrong! Please try again.";
+                    return RedirectToAction("RegisterMember");
+                }
+            }
+            else
+            {
+                TempData["Message"] = "Some thing went wrong! Please try again.";
+                return RedirectToAction("RegisterMember");
+            }            
+        }
+
+        
         [NonAction]
-        public int Pay(Member obj, int MemberID)
+        public int Pay(Member obj, int MemberID, string paypal_Id)
         {
             try
             {
@@ -92,6 +180,16 @@ namespace MyGym.Controllers
                 payment.CreateUserID = Convert.ToInt32(Session["UserID"]);
                 payment.ModifyUserID = 0;
                 payment.MemberID = MemberID;
+                payment.PayPalID = paypal_Id;
+
+                if (!string.IsNullOrEmpty(payment.PayPalID))
+                {
+                    payment.PaymentType = "Online_paypal";
+                }
+                else
+                {
+                    payment.PaymentType = "Cash";
+                }
 
                 int payresult = br.InsertPaymentDetails(payment);
 

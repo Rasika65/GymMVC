@@ -134,13 +134,14 @@ namespace MyGym.Repository
                 paramater.Add("@PaymentID", payment.PaymentID);
                 paramater.Add("@PlanID", payment.PlanID);
                 paramater.Add("@WorkouttypeID", payment.WorkouttypeID);
-                paramater.Add("@Paymenttype", "Cash");
+                paramater.Add("@Paymenttype", payment.PaymentType);
                 paramater.Add("@PaymentFromdt", payment.PaymentFromdt);
                 paramater.Add("@PaymentAmount", payment.PaymentAmount);
                 paramater.Add("@CreateUserID", payment.CreateUserID);
                 paramater.Add("@ModifyUserID", payment.ModifyUserID);
                 paramater.Add("@RecStatus", "A");
                 paramater.Add("@MemberID", payment.MemberID);
+                paramater.Add("@PayPalID", payment.PayPalID);
                 paramater.Add("@PaymentIDOUT", dbType: DbType.Int32, direction: ParameterDirection.Output);
                 con.Execute("sprocPaymentDetailsInsertUpdateSingleItem", paramater, null, 0, CommandType.StoredProcedure);
                 int PaymentID = paramater.Get<int>("PaymentIDOUT");

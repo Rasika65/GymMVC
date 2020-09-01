@@ -31,6 +31,8 @@ namespace MyGym.Models
         public String RecStatus { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime NextRenwalDate { get; set; }
+        public string PayPalID { get; set; }
+        public string PaymentType { get; set; }
 
 
         public IEnumerable<Payment> SearchResults { get; set; }

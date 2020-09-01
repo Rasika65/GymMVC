@@ -12,6 +12,7 @@
 <link href="~/Content/Site.css" rel="stylesheet" />
 
 
+
 <div class="container">
     <div class="clearfix"></div>
     <fieldset>
@@ -51,3 +52,17 @@
         </div>
     </fieldset>
 </div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var success = @((TempData["Message"] != null).ToString().ToLower());
+            console.log(success);
+            if (success == true) {
+                var msg='@TempData["Message"]';
+                alert(msg);
+            };
+        });
+    </script>
+}

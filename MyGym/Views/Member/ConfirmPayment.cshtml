@@ -1,7 +1,7 @@
 ﻿@model MyGym.Models.Member
 
 @{
-    ViewBag.Title = "RegisterMember";
+    ViewBag.Title = "Confirm Payment";
 }
 
 <script src="~/Scripts/jquery-1.11.1.js" type="text/javascript"></script>
@@ -13,57 +13,10 @@
 <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/Site.css" rel="stylesheet" />
 
-<script type="text/javascript">
-    $(document).ready(function () {
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
 
-        $("#WorkouttypeID").change(function () {
-            $("#PlantypeID").empty();
-            $.ajax({
-                type: 'POST',
-                url: '@Url.Action("GetPlan")',
-                dataType: 'json',
-                data: { WorkTypeID: $("#WorkouttypeID").val() },
-                success: function (plandata) {
-                    $("#PlantypeID").append('<option value="' + "0" + '">' + "Select" + '</option>');
-
-                    $.each(plandata, function (i, plan) {
-                        $("#PlantypeID").append('<option value="' + plan.PlanID + '">' + plan.PlanName + '</option>');
-                    });
-                },
-                error: function (ex) {
-                    alert('Failed to retrieve Plan List.' + ex);
-                }
-            });
-            return false;
-        })
-
-
-    });
-
-</script>
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        $("#PlantypeID").change(function () {
-            $.ajax({
-                type: 'POST',
-                url: '@Url.Action("GetAmount")',
-                dataType: 'json',
-                data: { PlanID: $("#PlantypeID").val(), WorkTypeID: $("#WorkouttypeID").val() },
-                success: function (amount) {
-                    $("#Amount").val(amount);
-                },
-                error: function (ex) {
-                    alert('Failed to retrieve states.' + ex);
-                }
-            });
-            return false;
-        })
-    });
-
-
-</script>
+<script src="https://www.paypal.com/sdk/js?client-id=AZfXYUJZe5CefHebouYrFPmTRA2MOmpUxsKULYqLHlz4Bwt9Bl2wGw_UJj_SRTpm6UScuwhHBikY7vrt"></script>
 
 <div class="container">
     <div class="clearfix"></div>
@@ -76,30 +29,23 @@
             <legend>Register Member</legend>
 
             <div class="panel">
-                <div class="panel-body">
-
-                    <div>
-                        @Html.ActionLink("All Member Registration", "GetAllMembers", "Member", new { @class = "btn btn-info btn-pressure" })
-                    </div>
-
+                <div class="panel-body" style="margin-left:20px">
                     <br />
-
-
                     <div style="margin-top: 5px"></div>
 
-                    <div class="row">
+                    <div class="row" >
                         <div class="col-md-2">
                             @Html.LabelFor(model => model.MemberFName)
                         </div>
                         <div class="col-md-3">
-                            @Html.TextBoxFor(model => model.MemberFName, new { @class = "form-control" })
+                            @Html.TextBoxFor(model => model.MemberFName, new { @class = "form-control", @readonly = "readonly" })
                         </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-2">
                             @Html.LabelFor(model => model.MemberLName)
                         </div>
                         <div class="col-md-3">
-                            @Html.TextBoxFor(model => model.MemberLName, new { @class = "form-control" })
+                            @Html.TextBoxFor(model => model.MemberLName, new { @class = "form-control", @readonly = "readonly" })
                         </div>
                     </div>
                     <div style="margin-top: 5px"></div>
@@ -109,7 +55,7 @@
                             @Html.LabelFor(model => model.MemberMName)
                         </div>
                         <div class="col-md-3">
-                            @Html.TextBoxFor(model => model.MemberMName, new { @class = "form-control" })
+                            @Html.TextBoxFor(model => model.MemberMName, new { @class = "form-control", @readonly = "readonly" })
                         </div>
                         <div class="col-md-1 col-sm-1"></div>
                         <div class="col-md-2">
@@ -145,16 +91,16 @@
                         <div class="col-md-3">
                             @Html.DropDownList("Gender",
                                          new List<SelectListItem>
-                            {  
+                            {
                                              new SelectListItem {Text = "Male", Value = "1"},
-                                             new SelectListItem {Text = "Female", Value = "2"}}, "Select Gender", new { @class = "form-control" })
+                                             new SelectListItem {Text = "Female", Value = "2"}}, "Select Gender", new { @class = "form-control" ,@disabled="disabled"})
                         </div>
                         <div class="col-md-1 col-sm-1"></div>
                         <div class="col-md-2">
                             @Html.LabelFor(model => model.EmailID)
                         </div>
                         <div class="col-md-3">
-                            @Html.TextBoxFor(model => model.EmailID, new { @class = "form-control" })
+                            @Html.TextBoxFor(model => model.EmailID, new { @class = "form-control", @readonly = "readonly" })
                         </div>
                     </div>
                     <div style="margin-top: 5px"></div>
@@ -165,14 +111,15 @@
                             @Html.LabelFor(model => model.WorkouttypeID)
                         </div>
                         <div class="col-md-3">
-                            @Html.DropDownListFor(model => model.WorkouttypeID, new SelectList(Model.ListScheme, "SchemeID", "SchemeName"), "Select Workout Type", new { @class = "form-control" })
+                            @Html.DropDownListFor(model => model.WorkouttypeID, new SelectList(Model.ListScheme, "SchemeID", "SchemeName"), "Select Workout Type", new { @class = "form-control", @disabled = "disabled" })
                         </div>
                         <div class="col-md-1 col-sm-1"></div>
                         <div class="col-md-2">
                             @Html.LabelFor(model => model.PlantypeID)
                         </div>
                         <div class="col-md-3">
-                            @Html.DropDownListFor(model => model.PlantypeID, ViewBag.planlist as IEnumerable<SelectListItem>, "Select Plan Type", new { @class = "form-control" })
+                            @*@Html.DropDownListFor(model => model.PlantypeID, ViewBag.planlist as IEnumerable<SelectListItem>, "Select Plan Type", new { @class = "form-control", @disabled = "disabled" })*@
+                            @Html.DropDownListFor(model => model.PlantypeID, new SelectList(Model.ListPlan, "PlanID", "PlanName"), "Select Workout Type", new { @class = "form-control", @disabled = "disabled" })
                         </div>
                     </div>
                     <div style="margin-top: 10px"></div>
@@ -182,14 +129,14 @@
                             @Html.LabelFor(model => model.Contactno)
                         </div>
                         <div class="col-md-3">
-                            @Html.TextBoxFor(model => model.Contactno, new { @class = "form-control", maxlength = "10" })
+                            @Html.TextBoxFor(model => model.Contactno, new { @class = "form-control", maxlength = "10", @readonly = "readonly" })
                         </div>
                         <div class="col-md-1 col-sm-1"></div>
                         <div class="col-md-2">
                             @Html.LabelFor(model => model.Address)
                         </div>
                         <div class="col-md-3">
-                            @Html.TextAreaFor(model => model.Address, new { @class = "form-control" })
+                            @Html.TextAreaFor(model => model.Address, new { @class = "form-control", @readonly = "readonly" })
                         </div>
                     </div>
                     <div style="margin-top: 5px"></div>
@@ -199,22 +146,20 @@
                             @Html.LabelFor(model => model.Amount)
                         </div>
                         <div class="col-md-3">
-                            @Html.TextBoxFor(model => model.Amount, new { @class = "form-control"})
+                            @Html.TextBoxFor(model => model.Amount, new { @class = "form-control", @readonly = "readonly" })
                         </div>
                         <div class="col-md-1 col-sm-1"></div>
                     </div>
-                    <div style="margin-top: 5px"></div>
+                    <div style="margin-top: 40px"></div>
+                    
+
 
                     <div class="row">
-                        <div class="col-md-12">
-                            @Html.ValidationSummary(false, "Please fix the following errors and then submit the form")
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12" style="margin-left:8px">
                             <p>
-                                <input type="submit" value="Create" />
+                                <input type="submit" value="Pay Cash" style="width:35%; font-size:1.5em; min-height:45px" />
+                                <div id="paypal-button-container" style=" width:35%; "></div>
+                                @*<div id="paypal-button-container" style=" width:40%; margin:0 auto"></div>*@
                             </p>
                         </div>
                     </div>
@@ -223,58 +168,39 @@
             </div>
         </fieldset>
     }
-
-
 </div>
 
-@*@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}*@
+
 
 @section Scripts {
+    <script>
+            var amount = document.getElementById('Amount').value;
+            //console.log(amount);
 
-    <script src="~/Scripts/jquery-ui.min.js"></script>
+            paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                  value: amount
+                  //value:'0.01'
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function (details) {
+                //alert('Transaction completed by ' + details.payer.name.given_name);
 
-    @Styles.Render("~/Content/themes/base/css")
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $(".date-picker").datepicker(
-            {
-                changeMonth: true,
-                changeYear: true,
-                beforeShow: customRange,
-                dateFormat: "dd/mm/yy",
-                yearRange: "-100:+100",
-                onSelect: function (selectedDate) {
-                    if (this.id == 'DOB') {
-                        CalculateAge(selectedDate);
-                    }
-                    
-                }
-            });
-
-            function customRange(input) {
-
-                return {
-                    maxDate: (input.id == "DOB" ? "dateToday" : (input.id == "JoiningDate" ? new Date(new Date().setFullYear(new Date().getFullYear() + 1)) : null)),
-                    minDate: (input.id == "JoiningDate" ? "dateToday" : null)
-
-                };
-            }
-        });
-
-
-        function CalculateAge(selectedDate) {
-            var x = selectedDate.split('/');
-            var curYear = new Date().getUTCFullYear();
-            var age = curYear - x[2];
-            $('#Age').val(age);
+                //console.log(details);
+                var Id = details.payer.name.given_name + "_" + details.payer.name.surname + "_" + details.payer.payer_id;
+                //window.location.href = "/Member/PaymentSucccess";
+                //window.location.href = "/Member/PaymentSucccess?Page=data&Post=" + Id;
+                window.location.href = '@Url.Action("PaymentSucccess", "Member", new { tran_Id = "x" })'.replace('x', Id);
+          });
         }
+      }).render('#paypal-button-container'); // Display payment options on your web page
     </script>
-
 }
+
 
